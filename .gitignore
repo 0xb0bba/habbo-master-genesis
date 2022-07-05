@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+mapfigureparts.js
+figureparts.backup.json
+figureparts.new.json
+nfts.json

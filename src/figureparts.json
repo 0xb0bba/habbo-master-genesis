@@ -1,0 +1,882 @@
+{
+  "Belt": {
+    "Classic Belt": "wa-2001",
+    "Holster": "wa-3263-{0}",
+    "Jewel Belt": "wa-2008",
+    "None": "",
+    "Rat Tail": "wa-3895-{0}",
+    "Skull Belt": "wa-2002",
+    "Spike Belt": "wa-2006",
+    "Star Buckle Belt": "wa-2003",
+    "Sunny Day Satchel": "wa-3661-{0}"
+  },
+  "Complexion": {
+    "Almond": "1379",
+    "Cacao": "1371",
+    "Dark Blue": "1365",
+    "Dark Sand": "18",
+    "Dusty Rose": "1369",
+    "Green": "1362",
+    "Grey": "29",
+    "Light Green": "1361",
+    "Mauve": "1363",
+    "Medium Golden": "8",
+    "Mermaid": "1",
+    "Mighty Demon": "30",
+    "Noble Royal": "",
+    "Purple": "1364",
+    "Rose Beige": "12",
+    "Sand": "14",
+    "Vanilla": "10",
+    "Warm Brown": "1388"
+  },
+  "Eyewear": {
+    "3D Glasses": "ea-1406",
+    "Aviator Sunglasses": "ea-3168-{0}",
+    "Bird Masquerade Mask": "ea-3224-{0}",
+    "Classic Shades": "ea-3170-{0}",
+    "Cyber Eye": "ea-3388-{0}",
+    "Hero Mask": "ea-3083-{0}",
+    "Hipster Glasses": "ea-3484",
+    "Hypnotic glasses": "ea-4212",
+    "Jewelled Glasses": "ea-4161",
+    "Leafy Mask": "ea-3822-{0}",
+    "None": "",
+    "Ornate Specs": "ea-3727",
+    "Pirate Patch": "ea-1402",
+    "Ski Goggles": "ea-3148-{0}",
+    "Skull": "ea-3141",
+    "Small Round Glasses": "ea-3169-{0}",
+    "Snorkle": "ea-3196-{0}",
+    "Strawberry Eyes": "ea-3961",
+    "Thick glasses": "ea-1401-{0}",
+    "VR Glasses": "ea-1405"
+  },
+  "Face": {
+    "Alien": {
+      "f": "hd-4266-{0}",
+      "m": "hd-4266-{0}"
+    },
+    "Anime Eyes": {
+      "f": "hd-4279-{0}",
+      "m": "hd-4279-{0}"
+    },
+    "Big Eyes": {
+      "f": "hd-629-{0}",
+      "m": "hd-209-{0}"
+    },
+    "Brown Dog": {
+      "f": "hd-4204-{0}",
+      "m": "hd-4204-{0}"
+    },
+    "Dark RoboBoy Face": "hd-4287-{0}",
+    "Default": {
+      "f": "hd-600-{0}",
+      "m": "hd-180-{0}"
+    },
+    "Demonic Eyes": "hd-3604-{0}",
+    "Feminine": {
+      "f": "hd-3099-{0}",
+      "m": ""
+    },
+    "Galaxy": "hd-4268-{0}",
+    "Gangster Face": "hd-4174-{0}",
+    "Grey Dog": {
+      "f": "hd-4205-{0}",
+      "m": "hd-4205-{0}"
+    },
+    "HC Face": {
+      "f": "hd-3098-{0}",
+      "m": "hd-3103-{0}"
+    },
+    "Mystic's Eyes": "hd-3600-{0}",
+    "Pig": {
+      "f": "hd-4202-{0}",
+      "m": "hd-4202-{0}"
+    },
+    "Possessed Eyes": {
+      "f": "hd-3845-{0}",
+      "m": "hd-3845-{0}"
+    },
+    "Steampunk Robot": {
+      "f": "hd-4267-{0}",
+      "m": "hd-4267-{0}"
+    },
+    "Tired": {
+      "f": "",
+      "m": "hd-200-{0}"
+    },
+    "Wealthy Eyes": "hd-4280-{0}",
+    "Worried": {
+      "f": "",
+      "m": "hd-190-{0}"
+    },
+    "Yellow Dog": {
+      "f": "hd-4203-{0}",
+      "m": "hd-4203-{0}"
+    },
+    "Zombie": "hd-4206-{0}"
+  },
+  "Gender": {
+    "Female": "f",
+    "Male": "m"
+  },
+  "Hair": {
+    "20 Year Dreads": "hr-3800-{0}",
+    "Afro": {
+      "m": "hr-110-{0}",
+      "f": "hr-863-{0}"
+    },
+    "Elemental Fire": "hr-4269",
+    "Elemental Ice": "hr-4270",
+    "Flicked Out Short": {
+      "m": "hr-828-{0}",
+      "f": "hr-854-{0}"
+    },
+    "Long Messy Curls": {
+      "f": "hr-3791-{0}",
+      "m": "hr-3791-{0}"
+    },
+    "Luscious Long Hair": {
+      "f": "hr-3673-{0}",
+      "m": "hr-3673-{0}"
+    },
+    "None": "",
+    "Nordic Braids": {
+      "f": "hr-4031-{0}",
+      "m": "hr-4031-{0}"
+    },
+    "Roaring 20's": {
+      "f": "hr-3322-{0}",
+      "m": "hr-3322-{0}"
+    },
+    "Short Tufts": "hr-3829-{0}",
+    "Simple Ponytail": {
+      "f": "hr-892-{0}",
+      "m": "hr-892-{0}"
+    },
+    "Simple Short": {
+      "f": "hr-893-{0}",
+      "m": "hr-893-{0}"
+    },
+    "Smooth Waves": {
+      "f": "hr-3998-{0}",
+      "m": "hr-3998-{0}"
+    },
+    "Sporty Hair": "hr-3926-{0}",
+    "Top Knot": "hr-3531-{0}",
+    "Wavy Braids": "hr-3665-{0}",
+    "Wolverine": "hr-3256-{0}"
+  },
+  "Hair Color": {
+    "Autumn Dog": "",
+    "Blonde": "35",
+    "Brown": "",
+    "Cyan": "60",
+    "Dark Blue": "1402",
+    "Galaxy Cat": "",
+    "Ginger": "1400",
+    "Green": "1406",
+    "Handsome Boar": "",
+    "Mermaid Princess": "",
+    "Noble Royal": "",
+    "None": "",
+    "Pink": "1347",
+    "White": "49"
+  },
+  "Hat": {
+    "Archer Cap": "ha-3765-{0}",
+    "Aviator": "ha-3265-{0}",
+    "Big Hat with Arrow": "ha-4214-{0}",
+    "Brain Jar": "ha-3514-{0}",
+    "Cap": "ha-1002-{0}",
+    "Captain's Hat": "ha-3129-{0}",
+    "Duck": "ha-4215",
+    "Fish Monster": "ha-4207",
+    "Flat cap": "ha-3054-{0}",
+    "Military Parade Hat": "ha-3409-{0}",
+    "Mushroom Hat": "ha-3775-{0}",
+    "None": "",
+    "Piglet Hat": "ha-3767-{0}",
+    "Rockstar Headband": "ha-3352-{0}",
+    "Rooster": "ha-4208",
+    "Slouchy Knit Hat": "ha-3463-{0}",
+    "Squid Hat": "ha-3356",
+    "Top hat": "ha-3632-{0}",
+    "Witch Hat": "ha-3843-{0}",
+    "Wooly Bear Hat": "ha-4039-{0}"
+  },
+  "Head Accessory": {
+    "Antennae Headband": "he-3227-{0}",
+    "Autumn Leaves": "he-4260",
+    "Big Bow": "he-4213-{0}",
+    "Big Horns": "he-4210",
+    "Black Clouds": "he-4263",
+    "Blue Fire Horns": "he-4272",
+    "Bubbles": "he-4264",
+    "Cat Ears": "he-3082-{0}",
+    "Classic Tiara": "he-3258-{0}",
+    "Colorful Bubbles": "he-4265",
+    "Crystals Blue": "he-4259",
+    "Crystals Red": "he-4258",
+    "Cyber Punk Goggles": "he-3376-{0}",
+    "Fire Horns": "he-4271",
+    "Floral Crown": "he-3329-{0}",
+    "Green Leaves": "he-4261",
+    "H for Habbo Headphones": "he-3324-{0}",
+    "Ice Horns": "he-4209",
+    "None": "",
+    "Operator Headphones": "he-1607",
+    "Plume": "he-1601",
+    "Rose Hair Clip": "he-3079-{0}",
+    "Skull Sprout": "he-3821-{0}",
+    "White Clouds": "he-4262"
+  },
+  "Hues": {
+    "Autumn Dog": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Cute": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Dark Robot": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Desert": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "89-1325",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "67-66",
+      "Legs": "66-90",
+      "Mask": "",
+      "Shirt": "1321-67",
+      "Shoes": "1409"
+    },
+    "Earth": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "70",
+      "Legs": "91",
+      "Mask": "",
+      "Shirt": "1325-67",
+      "Shoes": "1331"
+    },
+    "Forest": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "1432",
+      "Head Accessory": "102",
+      "Jacket": "1432",
+      "Jewelry": "101",
+      "Legs": "1432-1430",
+      "Mask": "",
+      "Shirt": "102",
+      "Shoes": "1430"
+    },
+    "Fresh": {
+      "Belt": "",
+      "Eyewear": "1314",
+      "Hat": "89-68",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "89",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": "1408"
+    },
+    "Fruity": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Galactic": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Galaxy Cat": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Gothic": {
+      "Belt": "",
+      "Eyewear": "79-1420",
+      "Hat": "1419-1416",
+      "Head Accessory": "",
+      "Jacket": "110-64",
+      "Jewelry": "",
+      "Legs": "64",
+      "Mask": "",
+      "Shirt": "1419-76",
+      "Shoes": "64"
+    },
+    "Handsome Boar": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Heatwave": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "1412-100",
+      "Head Accessory": "1322-1410",
+      "Jacket": "100",
+      "Jewelry": "",
+      "Legs": "100-1412",
+      "Mask": "",
+      "Shirt": "1412-100",
+      "Shoes": "1412-1408"
+    },
+    "Lavender": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "98",
+      "Head Accessory": "",
+      "Jacket": "1327-95",
+      "Jewelry": "95-98",
+      "Legs": "99-98",
+      "Mask": "",
+      "Shirt": "1416",
+      "Shoes": "1417-1416"
+    },
+    "Mermaid": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "1332",
+      "Jewelry": "",
+      "Legs": "1327",
+      "Mask": "",
+      "Shirt": "105",
+      "Shoes": "106"
+    },
+    "Mermaid Princess": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Midnight": {
+      "Belt": "",
+      "Eyewear": "64-110",
+      "Hat": "",
+      "Head Accessory": "1419",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "110",
+      "Mask": "",
+      "Shirt": "108",
+      "Shoes": "1425"
+    },
+    "Mighty Demon": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Monochrome": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "64",
+      "Mask": "",
+      "Shirt": "1427-1428",
+      "Shoes": "1427"
+    },
+    "Mysterious": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Noble Royal": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Ocean": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "107",
+      "Head Accessory": "104",
+      "Jacket": "1423-106",
+      "Jewelry": "",
+      "Legs": "107-1423",
+      "Mask": "",
+      "Shirt": "106",
+      "Shoes": "1425"
+    },
+    "Royal": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Rustic": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Sporty": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "1314-1323",
+      "Head Accessory": "1243",
+      "Jacket": "64-102",
+      "Jewelry": "96",
+      "Legs": "1314",
+      "Mask": "",
+      "Shirt": "107-1322",
+      "Shoes": "1408-1315"
+    },
+    "Spring": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Steampunk Robot": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Trippy Alien": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Winter": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    },
+    "Zombie Warrior": {
+      "Belt": "",
+      "Eyewear": "",
+      "Hat": "",
+      "Head Accessory": "",
+      "Jacket": "",
+      "Jewelry": "",
+      "Legs": "",
+      "Mask": "",
+      "Shirt": "",
+      "Shoes": ""
+    }
+  },
+  "Jacket": {
+    "Cape of Pride": "cc-4179",
+    "Chocolate Hoody": {
+      "m": "cc-3389-{0}",
+      "f": "cc-3390-{0}"
+    },
+    "Classic Cape": "cc-3299-{0}",
+    "Cook's Apron": {
+      "f": "cc-3572-{0}",
+      "m": "cc-3573-{0}"
+    },
+    "Jumper Belt": "cc-3532-{0}",
+    "Leather Jacket": {
+      "f": "cc-3373-{0}",
+      "m": "cc-3374-{0}"
+    },
+    "None": "",
+    "Pinstripe Jacket": {
+      "f": "cc-3008-{0}",
+      "m": "cc-3007-{0}"
+    },
+    "Royal Cape": {
+      "f": "cc-4277-{0}",
+      "m": "cc-4277-{0}"
+    },
+    "Spiked Shoulder Pads": "cc-3232-{0}",
+    "Windswept": {
+      "f": "cc-4278-{0}",
+      "m": "cc-4278-{0}"
+    },
+    "Wool Cape Coat": {
+      "f": "cc-4106-{0}",
+      "m": "cc-4107-{0}"
+    }
+  },
+  "Jewelry": {
+    "Binoculars": "ca-3919-{0}",
+    "Classic Scarf": "ca-1815-{0}",
+    "Classic Tassled Scarf": "ca-3217-{0}",
+    "Cursed skull pendant": "ca-3444-{0}",
+    "Jewel Tassel Necklace": "ca-1808",
+    "None": "",
+    "Paparazzi Camera": "ca-3485",
+    "Peace Necklace": "ca-1809",
+    "Rugged Backpack": "ca-3802-{0}"
+  },
+  "Legs": {
+    "Animal Print Leggings": "lg-3353-{0}",
+    "Belted Canvas Shorts": {
+      "f": "lg-3202-{0}",
+      "m": "lg-3202-{0}"
+    },
+    "Cat Pants": "lg-3337-{0}",
+    "Classic Pants": {
+      "f": "lg-720-{0}",
+      "m": "lg-285-{0}"
+    },
+    "Cyberpunk Striders": "lg-4017-{0}",
+    "Flared Pants": {
+      "f": "lg-710-{0}",
+      "m": "lg-280-{0}"
+    },
+    "Grass Skirt": {
+      "f": "lg-3216-{0}",
+      "m": "lg-3216-{0}"
+    },
+    "Highwaisted Trousers": {
+      "f": "lg-4066-{0}",
+      "m": "lg-4066-{0}"
+    },
+    "Layered Long Skirt": {
+      "f": "lg-3842-{0}",
+      "m": "lg-3842-{0}"
+    },
+    "Mermaid Skirt": {
+      "f": "lg-3333-{0}",
+      "m": "lg-3333-{0}"
+    },
+    "None": {
+      "f": "lg-3078-1314",
+      "m": "lg-3078-1314"
+    },
+    "Skater Skirt": {
+      "f": "lg-3387-{0}",
+      "m": "lg-3387-{0}"
+    },
+    "Skinny Jeans": {
+      "f": "lg-3057-{0}",
+      "m": "lg-3057-{0}"
+    },
+    "Spiderweb Skirt": "lg-4012-{0}",
+    "Strap Trousers": "lg-3384-{0}",
+    "Suspender Pants": "lg-3078-{0}",
+    "Tokyo Tutu": {
+      "f": "lg-3695-{0}",
+      "m": "lg-3695-{0}"
+    }
+  },
+  "Mask": {
+    "Bandit Mask": "fa-1209-{0}",
+    "Beard": "fa-1205-{0}",
+    "Bubblegum Bubble": "fa-4168-{0}",
+    "Carrot Nose": "fa-3147-{0}",
+    "Clown Mask": "fa-4013",
+    "Demon Mask": "fa-4211",
+    "Fawkes Mustache": "fa-1204",
+    "Flower-Studded Beard": "fa-3812-{0}",
+    "Mustache": "fa-1206-{0}",
+    "None": "",
+    "Ravenous Wolf Mask": "fa-3771-{0}",
+    "Surgical Mask": "fa-1212",
+    "Veil": "fa-3193-{0}",
+    "Vent Mask": "fa-4014-{0}"
+  },
+  "Shirt": {
+    "Bandage Top": {
+      "f": "ch-3233-{0}",
+      "m": "ch-3234-{0}"
+    },
+    "Cat Top": {
+      "f": "ch-3335-{0}",
+      "m": "ch-3334-{0}"
+    },
+    "Classic Hoodie": {
+      "f": "ch-660-{0}",
+      "m": "ch-255-{0}"
+    },
+    "Classic T-Shirt": {
+      "f": "ch-635-{0}",
+      "m": "ch-215-{0}"
+    },
+    "Cyberpunk Battle Armour": "ch-4025-{0}",
+    "Habbo Logo": {
+      "f": "ch-4224-{0}",
+      "m": "ch-4219-{0}"
+    },
+    "Habbo Logo Golden": {
+      "f": "ch-4234",
+      "m": "ch-4229"
+    },
+    "Habbo Logo Rainbow": {
+      "f": "ch-4244",
+      "m": "ch-4239"
+    },
+    "Habbo Logo Trippy": {
+      "f": "ch-4254",
+      "m": "ch-4249"
+    },
+    "Hearts": {
+      "f": "ch-4225-{0}",
+      "m": "ch-4220-{0}"
+    },
+    "Hearts Golden": {
+      "f": "ch-4235",
+      "m": "ch-4230"
+    },
+    "Hearts Rainbow": {
+      "f": "ch-4245",
+      "m": "ch-4240"
+    },
+    "Hearts Trippy": {
+      "f": "ch-4255",
+      "m": "ch-4250"
+    },
+    "Hideaway Colorable": {
+      "m": "ch-4221-{0}",
+      "f": "ch-4226-{0}"
+    },
+    "Hideaway Golden": {
+      "f": "ch-4236",
+      "m": "ch-4231"
+    },
+    "Hideaway Rainbow": {
+      "f": "ch-4246",
+      "m": "ch-4241"
+    },
+    "Hideaway Trippy": {
+      "f": "ch-4256",
+      "m": "ch-4251"
+    },
+    "Hitched Wooley Jumper": {
+      "m": "ch-3880-{0}",
+      "f": "ch-3881-{0}"
+    },
+    "Inmate Overalls":  {
+      "f": "ch-3689-{0}",
+      "m": "ch-3688-{0}"
+    },
+    "Mermaid Top": "ch-3332-{0}",
+    "Off-Shoulder Jumper": {
+      "f": "ch-3528-{0}",
+      "m": "ch-3527-{0}"
+    },
+    "Ruffled Shirt": {
+      "f": "ch-3636-{0}",
+      "m": "ch-3637-{0}"
+    },
+    "Sailor Sweater": {
+      "f": "ch-3682-{0}",
+      "m": "ch-3683-{0}"
+    },
+    "Skeleton Chest": {
+      "f": "ch-3237-{0}",
+      "m": "ch-3237-{0}"
+    },
+    "Skull Tank Top": {
+      "f": "ch-3183",
+      "m": "ch-3167"
+    },
+    "Skull and Bones": {
+      "f": "ch-4227-{0}",
+      "m": "ch-4222-{0}"
+    },
+    "Skull and Bones Golden": {
+      "f": "ch-4237",
+      "m": "ch-4232"
+    },
+    "Skull and Bones Rainbow": {
+      "f": "ch-4247",
+      "m": "ch-4242"
+    },
+    "Skull and Bones Trippy": {
+      "f": "ch-4257",
+      "m": "ch-4252"
+    },
+    "Starched Tuxedo Shirt": {
+      "f": "ch-3505-{0}",
+      "m": "ch-3506-{0}"
+    },
+    "Sulake Cloud": {
+      "f": "ch-4223-{0}",
+      "m": "ch-4218-{0}"
+    },
+    "Sulake Cloud Golden": {
+      "f": "ch-4233",
+      "m": "ch-4228"
+    },
+    "Sulake Cloud Rainbow": {
+      "f": "ch-4243",
+      "m": "ch-4238"
+    },
+    "Sulake Cloud Trippy": {
+      "f": "ch-4253",
+      "m": "ch-4248"
+    },
+    "Two Tone Top": {
+      "f": "ch-3836-{0}",
+      "m": "ch-3836-{0}"
+    }
+  },
+  "Shoes": {
+    "Bunny Slippers": "sh-905-{0}",
+    "Classic casual shoes": {
+      "f": "sh-725-{0}",
+      "m": "sh-290-{0}"
+    },
+    "Classic formal shoes": {
+      "f": "sh-735-{0}",
+      "m": "sh-300-{0}"
+    },
+    "Cyberpunk Sneakers": {
+      "f": "sh-4016-{0}",
+      "m": "sh-4016-{0}"
+    },
+    "Duck Slippers": {
+      "f": "sh-3275-{0}",
+      "m": "sh-3275-{0}"
+    },
+    "Flippers": "sh-3687-{0}",
+    "Gothic Boots": "sh-4064-{0}",
+    "None": "",
+    "Paw Shoes": "sh-3338-{0}",
+    "Sandals": {
+      "f": "sh-3206-{0}",
+      "m": "sh-3206-{0}"
+    },
+    "Vintage Canvas": {
+      "f": "sh-3089-{0}",
+      "m": "sh-3089-{0}"
+    },
+    "Winter Boots": {
+      "f": "sh-3252-{0}",
+      "m": "sh-3252-{0}"
+    }
+  }
+}
