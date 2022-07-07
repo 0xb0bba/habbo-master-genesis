@@ -77,7 +77,10 @@
       "f": "hd-600-{0}",
       "m": "hd-180-{0}"
     },
-    "Demonic Eyes": "hd-3604-{0}",
+    "Demonic Eyes": {
+      "f": "hd-3604-{0}",
+      "m": "hd-3604-{0}"
+    },
     "Feminine": {
       "f": "hd-3099-{0}",
       "m": ""
@@ -92,7 +95,10 @@
       "f": "hd-3098-{0}",
       "m": "hd-3103-{0}"
     },
-    "Mystic's Eyes": "hd-3600-{0}",
+    "Mystic's Eyes": {
+      "f": "hd-3600-{0}",
+      "m": "hd-3600-{0}"
+    },
     "Pig": {
       "f": "hd-4202-{0}",
       "m": "hd-4202-{0}"
@@ -109,7 +115,10 @@
       "f": "",
       "m": "hd-200-{0}"
     },
-    "Wealthy Eyes": "hd-4280-{0}",
+    "Wealthy Eyes": {
+      "f": "hd-4280-{0}",
+      "m": "hd-4280-{0}"
+    },
     "Worried": {
       "f": "",
       "m": "hd-190-{0}"
@@ -118,7 +127,10 @@
       "f": "hd-4203-{0}",
       "m": "hd-4203-{0}"
     },
-    "Zombie": "hd-4206-{0}"
+    "Zombie": {
+      "f": "hd-4206-{0}",
+      "m": "hd-4206-{0}"
+    }
   },
   "Gender": {
     "Female": "f",
@@ -133,7 +145,10 @@
       "m": "hr-110-{0}",
       "f": "hr-863-{0}"
     },
-    "Elemental Fire": "hr-4269",
+    "Elemental Fire": {
+      "f": "hr-4269",
+      "m": "hr-4269"
+    },
     "Elemental Ice": "hr-4270",
     "Flicked Out Short": {
       "m": "hr-828-{0}",
@@ -172,20 +187,32 @@
       "f": "hr-3998-{0}",
       "m": "hr-3998-{0}"
     },
-    "Sporty Hair": "hr-3926-{0}",
-    "Top Knot": "hr-3531-{0}",
-    "Wavy Braids": "hr-3665-{0}",
-    "Wolverine": "hr-3256-{0}"
+    "Sporty Hair": {
+      "f": "hr-3926-{0}",
+      "m": "hr-3926-{0}"
+    },
+    "Top Knot": {
+      "f": "hr-3531-{0}",
+      "m": "hr-3531-{0}"
+    },
+    "Wavy Braids": {
+      "f": "hr-3665-{0}",
+      "m": "hr-3665-{0}"
+    },
+    "Wolverine": {
+      "f": "hr-3256-{0}",
+      "m": "hr-3256-{0}"
+    }
   },
   "Hair Color": {
     "Autumn Dog": "",
-    "Blonde": "35",
-    "Brown": "",
-    "Cyan": "60",
+    "Blonde": "35-43",
+    "Brown": "37-1347",
+    "Cyan": "60-50",
     "Dark Blue": "1402-58",
     "Galaxy Cat": "",
     "Ginger": "1400-34",
-    "Green": "1406",
+    "Green": "1406-50",
     "Handsome Boar": "",
     "Mermaid Princess": "",
     "Noble Royal": "",
@@ -258,13 +285,13 @@
       "Belt": "",
       "Eyewear": "1320-1314",
       "Hat": "1327-1326",
-      "Head Accessory": "1326",
+      "Head Accessory": "1326-1337",
       "Jacket": "",
       "Jewelry": "1314-1326",
       "Legs": "105-1332",
       "Mask": "",
       "Shirt": "1320-93",
-      "Shoes": "1326"
+      "Shoes": "1326-1337"
     },
     "Dark Robot": {
       "Belt": "",
@@ -280,39 +307,39 @@
     },
     "Desert": {
       "Belt": "",
-      "Eyewear": "",
+      "Eyewear": "90",
       "Hat": "89-1325",
       "Head Accessory": "",
-      "Jacket": "66",
+      "Jacket": "66-91",
       "Jewelry": "67-66",
       "Legs": "66-90",
-      "Mask": "",
+      "Mask": "1320",
       "Shirt": "1321-67",
       "Shoes": "1409"
     },
     "Earth": {
-      "Belt": "",
+      "Belt": "85-1334",
       "Eyewear": "",
-      "Hat": "",
+      "Hat": "90-85",
       "Head Accessory": "",
-      "Jacket": "",
-      "Jewelry": "70",
-      "Legs": "91",
-      "Mask": "",
+      "Jacket": "1331-90",
+      "Jewelry": "70-1331",
+      "Legs": "91-67",
+      "Mask": "1409",
       "Shirt": "1325-67",
       "Shoes": "1331"
     },
     "Forest": {
       "Belt": "",
       "Eyewear": "",
-      "Hat": "1432",
-      "Head Accessory": "102",
-      "Jacket": "1432",
+      "Hat": "1432-1408",
+      "Head Accessory": "102-1432",
+      "Jacket": "1432-1430",
       "Jewelry": "101",
       "Legs": "1432-1430",
       "Mask": "",
-      "Shirt": "102",
-      "Shoes": "1430"
+      "Shirt": "102-1432",
+      "Shoes": "1430-1432"
     },
     "Fresh": {
       "Belt": "",
@@ -320,18 +347,18 @@
       "Hat": "89-68",
       "Head Accessory": "",
       "Jacket": "",
-      "Jewelry": "",
+      "Jewelry": "1314-1320",
       "Legs": "89",
       "Mask": "",
-      "Shirt": "",
+      "Shirt": "1314-1408",
       "Shoes": "1408"
     },
     "Fruity": {
       "Belt": "",
-      "Eyewear": "",
-      "Hat": "",
+      "Eyewear": "1416-1327",
+      "Hat": "96",
       "Head Accessory": "",
-      "Jacket": "",
+      "Jacket": "102-1432",
       "Jewelry": "",
       "Legs": "1315-102",
       "Mask": "",
@@ -387,40 +414,40 @@
       "Shoes": ""
     },
     "Heatwave": {
-      "Belt": "",
+      "Belt": "1323",
       "Eyewear": "",
       "Hat": "1412-100",
       "Head Accessory": "1322-1410",
       "Jacket": "100",
-      "Jewelry": "",
+      "Jewelry": "94-72",
       "Legs": "100-1412",
-      "Mask": "",
+      "Mask": "1323",
       "Shirt": "1412-100",
       "Shoes": "1412-1408"
     },
     "Lavender": {
       "Belt": "",
-      "Eyewear": "",
-      "Hat": "98",
-      "Head Accessory": "",
+      "Eyewear": "98-1339",
+      "Hat": "98-1416",
+      "Head Accessory": "99",
       "Jacket": "1327-95",
       "Jewelry": "95-98",
       "Legs": "99-98",
-      "Mask": "",
-      "Shirt": "1416",
+      "Mask": "1414",
+      "Shirt": "1416-1339",
       "Shoes": "1417-1416"
     },
     "Mermaid": {
       "Belt": "1327-1416",
       "Eyewear": "",
-      "Hat": "",
+      "Hat": "1416-1327",
       "Head Accessory": "1332-105",
       "Jacket": "1332",
-      "Jewelry": "",
-      "Legs": "1327",
+      "Jewelry": "1326-1327",
+      "Legs": "1327-1326",
       "Mask": "",
-      "Shirt": "105",
-      "Shoes": "106"
+      "Shirt": "105-106",
+      "Shoes": "106-1339"
     },
     "Mermaid Princess": {
       "Belt": "",
@@ -435,16 +462,16 @@
       "Shoes": ""
     },
     "Midnight": {
-      "Belt": "",
+      "Belt": "1417-110",
       "Eyewear": "64-110",
-      "Hat": "",
-      "Head Accessory": "1419",
-      "Jacket": "",
-      "Jewelry": "",
-      "Legs": "110",
+      "Hat": "1424-1338",
+      "Head Accessory": "1419-1424",
+      "Jacket": "107-108",
+      "Jewelry": "1426",
+      "Legs": "110-108",
       "Mask": "",
-      "Shirt": "108",
-      "Shoes": "1425"
+      "Shirt": "108-1423",
+      "Shoes": "1425-1338"
     },
     "Mighty Demon": {
       "Belt": "",
@@ -460,27 +487,27 @@
     },
     "Monochrome": {
       "Belt": "",
-      "Eyewear": "",
+      "Eyewear": "110-1427",
       "Hat": "1428-1408",
       "Head Accessory": "",
-      "Jacket": "64",
+      "Jacket": "64-110",
       "Jewelry": "",
       "Legs": "64-110",
       "Mask": "",
       "Shirt": "1427-1428",
-      "Shoes": "1427"
+      "Shoes": "1427-1428"
     },
     "Mysterious": {
-      "Belt": "",
+      "Belt": "1314",
       "Eyewear": "",
       "Hat": "",
       "Head Accessory": "",
       "Jacket": "",
       "Jewelry": "",
-      "Legs": "",
+      "Legs": "110-100",
       "Mask": "",
-      "Shirt": "",
-      "Shoes": ""
+      "Shirt": "1408",
+      "Shoes": "64-73"
     },
     "Noble Royal": {
       "Belt": "",
@@ -495,49 +522,49 @@
       "Shoes": ""
     },
     "Ocean": {
-      "Belt": "",
-      "Eyewear": "",
-      "Hat": "107",
+      "Belt": "1332-1433",
+      "Eyewear": "106",
+      "Hat": "107-1423",
       "Head Accessory": "104",
       "Jacket": "1423-106",
-      "Jewelry": "1332",
+      "Jewelry": "1332-105",
       "Legs": "107-1423",
-      "Mask": "",
+      "Mask": "1424",
       "Shirt": "106-105",
-      "Shoes": "1425"
+      "Shoes": "1425-1338"
     },
     "Royal": {
-      "Belt": "",
+      "Belt": "1314-1320",
       "Eyewear": "",
-      "Hat": "",
+      "Hat": "1417",
       "Head Accessory": "",
       "Jacket": "",
       "Jewelry": "",
-      "Legs": "",
+      "Legs": "100",
       "Mask": "",
-      "Shirt": "",
-      "Shoes": ""
+      "Shirt": "1314",
+      "Shoes": "1314"
     },
     "Rustic": {
       "Belt": "",
-      "Eyewear": "",
-      "Hat": "",
+      "Eyewear": "67",
+      "Hat": "67-1409",
       "Head Accessory": "",
       "Jacket": "",
       "Jewelry": "",
-      "Legs": "",
+      "Legs": "70",
       "Mask": "",
-      "Shirt": "",
-      "Shoes": ""
+      "Shirt": "67-66",
+      "Shoes": "1325"
     },
     "Sporty": {
       "Belt": "",
-      "Eyewear": "",
+      "Eyewear": "107-106",
       "Hat": "1314-1323",
-      "Head Accessory": "1243",
+      "Head Accessory": "1243-1416",
       "Jacket": "64-102",
       "Jewelry": "96",
-      "Legs": "1314",
+      "Legs": "1314-101",
       "Mask": "",
       "Shirt": "107-1322",
       "Shoes": "1408-1315"
@@ -545,14 +572,14 @@
     "Spring": {
       "Belt": "",
       "Eyewear": "",
-      "Hat": "",
-      "Head Accessory": "",
+      "Hat": "1332-102",
+      "Head Accessory": "93",
       "Jacket": "",
       "Jewelry": "",
-      "Legs": "",
-      "Mask": "",
-      "Shirt": "",
-      "Shoes": ""
+      "Legs": "1430",
+      "Mask": "102",
+      "Shirt": "102-1432",
+      "Shoes": "1327-1326"
     },
     "Steampunk Robot": {
       "Belt": "",
@@ -580,15 +607,15 @@
     },
     "Winter": {
       "Belt": "",
-      "Eyewear": "",
-      "Hat": "",
+      "Eyewear": "106",
+      "Hat": "1314-1423",
       "Head Accessory": "",
       "Jacket": "",
-      "Jewelry": "",
-      "Legs": "",
+      "Jewelry": "1424",
+      "Legs": "1338",
       "Mask": "",
-      "Shirt": "",
-      "Shoes": ""
+      "Shirt": "77-82",
+      "Shoes": "1314-105"
     },
     "Zombie Warrior": {
       "Belt": "",
@@ -604,17 +631,26 @@
     }
   },
   "Jacket": {
-    "Cape of Pride": "cc-4179",
+    "Cape of Pride": {
+      "f": "cc-4179",
+      "m": "cc-4179"
+    },
     "Chocolate Hoody": {
       "m": "cc-3389-{0}",
       "f": "cc-3390-{0}"
     },
-    "Classic Cape": "cc-3299-{0}",
+    "Classic Cape": {
+      "f": "cc-3299-{0}",
+      "m": "cc-3299-{0}"
+    },
     "Cook's Apron": {
       "f": "cc-3572-{0}",
       "m": "cc-3573-{0}"
     },
-    "Jumper Belt": "cc-3532-{0}",
+    "Jumper Belt": {
+      "f": "cc-3532-{0}",
+      "m": "cc-3532-{0}"
+    },
     "Leather Jacket": {
       "f": "cc-3373-{0}",
       "m": "cc-3374-{0}"
@@ -702,9 +738,18 @@
       "f": "lg-3057-{0}",
       "m": "lg-3057-{0}"
     },
-    "Spiderweb Skirt": "lg-4012-{0}",
-    "Strap Trousers": "lg-3384-{0}",
-    "Suspender Pants": "lg-3078-{0}",
+    "Spiderweb Skirt": {
+      "f": "lg-4012-{0}",
+      "m": "lg-4012-{0}"
+    },
+    "Strap Trousers": {
+      "f": "lg-3384-{0}",
+      "m": "lg-3384-{0}"
+    },
+    "Suspender Pants": {
+      "f": "lg-3078-{0}",
+      "m": "lg-3078-{0}"
+    },
     "Tokyo Tutu": {
       "f": "lg-3695-{0}",
       "m": "lg-3695-{0}"
@@ -743,7 +788,10 @@
       "f": "ch-635-{0}",
       "m": "ch-215-{0}"
     },
-    "Cyberpunk Battle Armour": "ch-4025-{0}",
+    "Cyberpunk Battle Armour": {
+      "f": "ch-4025-{0}",
+      "m": "ch-4025-{0}"
+    },
     "Habbo Logo": {
       "f": "ch-4224-{0}",
       "m": "ch-4219-{0}"
@@ -800,7 +848,10 @@
       "f": "ch-3689-{0}",
       "m": "ch-3688-{0}"
     },
-    "Mermaid Top": "ch-3332-{0}",
+    "Mermaid Top": {
+      "f": "ch-3332-{0}",
+      "m": "ch-3332-{0}"
+    },
     "Off-Shoulder Jumper": {
       "f": "ch-3528-{0}",
       "m": "ch-3527-{0}"
@@ -863,7 +914,10 @@
     }
   },
   "Shoes": {
-    "Bunny Slippers": "sh-905-{0}",
+    "Bunny Slippers": {
+      "f": "sh-905-{0}",
+      "m": "sh-905-{0}"
+    },
     "Classic casual shoes": {
       "f": "sh-725-{0}",
       "m": "sh-290-{0}"
@@ -886,7 +940,10 @@
     },
     "Gothic Boots": "sh-4064-{0}",
     "None": "",
-    "Paw Shoes": "sh-3338-{0}",
+    "Paw Shoes": {
+      "f": "sh-3338-{0}",
+      "m": "sh-3338-{0}"
+    },
     "Sandals": {
       "f": "sh-3206-{0}",
       "m": "sh-3206-{0}"

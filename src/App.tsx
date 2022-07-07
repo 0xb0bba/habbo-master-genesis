@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { FigureBuilder } from './FigureBuilder';
-import { IMetadata, ITrait } from './Metadata';
+import { IAvatar, IMetadata } from './Metadata';
 import metadata from './metadata.json'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { Box, Button, CssBaseline, Divider, Grid, IconButton, Stack, TextField, Typography } from '@mui/material';
@@ -14,7 +14,7 @@ const darkTheme = createTheme({
 
 
 interface IKeyedAvatar {
-  Traits: ITrait[]
+  Traits: IAvatar
   ID: string
   Key: number
 }
@@ -24,37 +24,23 @@ function App() {
   const [idInput, setIdInput] = useState('')
   const [key, setKey] = useState(0)
   const loadAvatar = () => {
-    let traits = (metadata as IMetadata)[idInput]
+    let traits = (metadata as IMetadata)[parseInt(idInput)]
     if (!traits) {
-      traits = [
-        {
-          trait_type: 'Gender',
-          value: 'Male'
-        },
-        {
-          trait_type: 'Complexion',
-          value: 'Vanilla'
-        },
-        {
-          trait_type: 'Hues',
-          value: 'Mysterious'
-        },
-        {
-          trait_type: 'Face',
-          value: 'Default'
-        },
-        {
-          trait_type: 'Shirt',
-          value: 'Classic T-Shirt'
-        }
-      ]
+      traits = {
+        Gender: 'Male',
+        Complexion: 'Vanilla',
+        Hues: 'Mysterious',
+        Face: 'Default',
+        Shirt: 'Classic T-Shirt',
+        Effect: 'Basic H'
+      }
     }
     // Add legs none to avatars that don't have legs, as this needs to be rendered
-    if (!traits.find(trait => trait.trait_type === 'Legs')) {
-      traits.push({ trait_type: 'Legs', value: 'None' })
+    if (!traits.Legs) {
+      traits.Legs = 'None'
     }
     setAvatars([{
-      Traits: traits,
+      Traits: { ...traits },
       ID: idInput,
       Key: key
     }, ...avatars])

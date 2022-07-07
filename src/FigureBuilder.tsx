@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import figurepartsTyped from './figureparts.json'
 import metadata from './metadata.json'
 import { Figure } from './Figure';
-import { IMetadata, ITrait } from './Metadata'
+import { IAvatar, IMetadata, Trait } from './Metadata'
 import { Autocomplete, Box, Button, Chip, FormControl, Grid, InputLabel, ListItemIcon, ListItemText, MenuItem, Select, SelectChangeEvent, TextField, Typography } from '@mui/material';
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh'
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark'
@@ -19,12 +19,12 @@ type FigurePart = string | { m: string, f: string }
 
 const autocompleteOptions = Object.keys(figureparts).flatMap(trait => {
     return Object.keys(figureparts[trait]).map(value => ({
-        trait,
+        trait: trait as Trait,
         value
     }))
 })
 
-export const FigureBuilder: React.FC<{ baseTraits: ITrait[] }> = ({ baseTraits }) => {
+export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits }) => {
     const [searchInput, setSearchInput] = useState('')
     const [traits, setTraits] = useState(baseTraits)
     const [showSuggestionsCount, setShowSuggestionsCount] = useState(16)
@@ -32,10 +32,39 @@ export const FigureBuilder: React.FC<{ baseTraits: ITrait[] }> = ({ baseTraits }
         setTraits(baseTraits)
     }, [baseTraits])
 
-    const hue = traits.find(trait => trait.trait_type === "Hues")!
-    const complexion = traits.find(trait => trait.trait_type === "Complexion")!
-    const gender = traits.find(trait => trait.trait_type === "Gender")!
-    const hairColor = traits.find(trait => trait.trait_type === "Hair Color")
+    const hue = traits.Hues
+    const complexion = traits.Complexion
+    const gender = traits.Gender
+    const hairColor = traits['Hair Color']
+
+    const getTraitColor = (trait: Trait, opt: string) => {
+        if ((baseTraits[trait] || 'None') === opt) {
+            return ''
+        }
+        const editedWithout = { ...editedTraits } as any
+        delete editedWithout[trait]
+
+        if (Object.keys(editedWithout).length === Object.keys(editedTraits).length && burnSuggestions.length) {
+            const match = burnSuggestions.find(id => (id.avatar[trait] || 'None') === opt)
+            if (match) {
+                return ''
+            }
+        } else {
+            const newTraits = {
+                ...editedWithout,
+                [trait]: opt
+            } as IAvatar
+
+            const match = metadata
+                .find(avatar => avatar && Object.keys(newTraits).every((edited) =>
+                    newTraits[edited as Trait] === (avatar[edited as Trait] || 'None')
+                ))
+            if (match) {
+                return ''
+            }
+        }
+        return 'grey'
+    }
 
     const getTraitIcon = (trait: string, opt: string) => {
         if (opt === 'None') {
@@ -60,7 +89,7 @@ export const FigureBuilder: React.FC<{ baseTraits: ITrait[] }> = ({ baseTraits }
                 return <ListItemIcon title="Trait info missing"><PriorityHighIcon /></ListItemIcon>
             }
             // Check if gender specific trait is defined
-            const genderPart = gender.value === 'Male' ? part.m : part.f
+            const genderPart = gender === 'Male' ? part.m : part.f
             if (!genderPart) {
                 return <ListItemIcon title="Trait may be incorrect for this gender"><QuestionMarkIcon /></ListItemIcon>
             }
@@ -71,18 +100,21 @@ export const FigureBuilder: React.FC<{ baseTraits: ITrait[] }> = ({ baseTraits }
         return null
     }
 
-    const handleSelectTrait = (e: SelectChangeEvent<string>) => selectTrait(e.target.name, e.target.value)
-    const restoreTrait = (name: string) => selectTrait(name, baseTraits.find(trait => trait.trait_type === name)?.value || 'None')
+    const handleSelectTrait = (e: SelectChangeEvent<string>) => selectTrait(e.target.name as Trait, e.target.value)
+    const restoreTrait = (name: Trait) => selectTrait(name, baseTraits[name] || 'None')
 
-    const selectTrait = (name: string, value: string) => {
-        setTraits([...traits.filter(attr => attr.trait_type !== name), {
-            trait_type: name,
-            value: value
-        }])
+    const selectTrait = (name: Trait, value: string) => {
+        setTraits({
+            ...traits,
+            [name]: value
+        } as IAvatar)
     }
 
     const editedTraits = useMemo(() => {
-        return traits.filter(trait => trait.value !== (baseTraits.find(baseTrait => baseTrait.trait_type === trait.trait_type)?.value || 'None'))
+        return Object.keys(traits)
+            .filter(trait => traits[trait as Trait] !== (baseTraits[trait as Trait] || 'None'))
+            .reduce((a, trait) => ({ ...a, [trait]: traits[trait as Trait] }), {}) as IAvatar
+        // return traits.filter(trait => trait.value !== (baseTraits.find(baseTrait => baseTrait.trait_type === trait.trait_type)?.value || 'None'))
     }, [baseTraits, traits])
 
     const rankEffect = (effect: string) => {
@@ -103,26 +135,22 @@ export const FigureBuilder: React.FC<{ baseTraits: ITrait[] }> = ({ baseTraits }
         return 0
     }
 
-    const getTrait = (traits: ITrait[], type: string) => {
-        return traits.find(trait => trait.trait_type === type)?.value || 'None'
-    }
-
     const burnSuggestions = useMemo(() => {
-        if (!editedTraits.length) {
+        if (!Object.keys(editedTraits).length) {
             return []
         }
         const metadataTyped = metadata as IMetadata
-        const matches = Object.keys(metadata)
-            .filter(id => editedTraits.every(edited =>
-                edited.value === (metadataTyped[id].find(trait => trait.trait_type === edited.trait_type)?.value || 'None')
+        const matches = metadata.map((avatar, id) => ({ avatar, id }))
+            .filter(val => val.avatar && Object.keys(editedTraits).every(edited =>
+                editedTraits[edited as Trait] === (val.avatar[edited as Trait] || 'None')
             ))
         return matches.sort((m1, m2) => {
-            const e1 = rankEffect(getTrait(metadataTyped[m1], 'Effect'))
-            const e2 = rankEffect(getTrait(metadataTyped[m2], 'Effect'))
+            const e1 = rankEffect(metadataTyped[m1.id]['Effect'])
+            const e2 = rankEffect(metadataTyped[m2.id]['Effect'])
             if (e1 !== e2) {
                 return e1 - e2
             }
-            return parseInt(m1) - parseInt(m2)
+            return m1.id - m2.id
         })
     }, [editedTraits])
 
@@ -130,18 +158,18 @@ export const FigureBuilder: React.FC<{ baseTraits: ITrait[] }> = ({ baseTraits }
         setShowSuggestionsCount(16)
     }, [burnSuggestions])
 
-    const figureString = traits.map(trait => {
-        let parts = figureparts[trait.trait_type]
+    const figureString = Object.keys(traits).map(trait => {
+        let parts = figureparts[trait]
         if (!parts) {
             // Effect
             return ''
         }
-        let part = parts[trait.value] as FigurePart
+        let part = parts[traits[trait as Trait] as any] as FigurePart
         if (typeof part !== 'string') {
             // Prefer own gender if known, otherwise try the other gender. It may be correct
-            part = gender.value === 'Male' ? part.m || part.f : part.f || part.m
+            part = gender === 'Male' ? part.m || part.f : part.f || part.m
         }
-        switch (trait.trait_type) {
+        switch (trait) {
             case 'Belt':
             case 'Eyewear':
             case 'Hat':
@@ -154,13 +182,13 @@ export const FigureBuilder: React.FC<{ baseTraits: ITrait[] }> = ({ baseTraits }
             case 'Shoes':
                 // Color from hue, specific for the trait type. Hopefully we don't need a color for each specific trait option
                 // Some traits have 1 color, others have multiple. But passing in multiple seems to work OK
-                return format(part, figureparts["Hues"][hue.value][trait.trait_type])
+                return format(part, figureparts["Hues"][hue][trait])
             case 'Face':
                 // Color from complexion
-                return format(part, figureparts["Complexion"][complexion.value])
+                return format(part, figureparts["Complexion"][complexion])
             case 'Hair':
                 // Color from hair color
-                return format(part, figureparts["Hair Color"][hairColor?.value || 'None'])
+                return format(part, figureparts["Hair Color"][hairColor || 'None'])
         }
         return ''
     }).filter(part => part).join('.')
@@ -173,7 +201,18 @@ export const FigureBuilder: React.FC<{ baseTraits: ITrait[] }> = ({ baseTraits }
                         <Autocomplete
                             disablePortal
                             options={autocompleteOptions}
-                            getOptionLabel={opt => `${opt.trait} - ${opt.value}`}
+                            groupBy={opt => opt.trait}
+                            getOptionLabel={opt => `${opt.trait} ${opt.value}`}
+                            renderOption={(props, opt) => <MenuItem {...props}>
+                                <div 
+                                    style={{
+                                    display: 'flex',
+                                    color: getTraitColor(opt.trait, opt.value)
+                                }}>
+                                    <ListItemText>{opt.value}</ListItemText>
+                                    {getTraitIcon(opt.trait, opt.value)}
+                                </div>
+                            </MenuItem>}
                             renderInput={(params) => <TextField {...params} label="Search trait" />}
                             autoHighlight
                             value={null}
@@ -194,14 +233,19 @@ export const FigureBuilder: React.FC<{ baseTraits: ITrait[] }> = ({ baseTraits }
                             <FormControl fullWidth size="small">
                                 <InputLabel>{trait}</InputLabel>
                                 <Select
+                                    MenuProps={{ disableScrollLock: true }}
                                     name={trait}
                                     label={trait}
-                                    value={traits.find(attr => attr.trait_type === trait)?.value || 'None'}
+                                    value={traits[trait as Trait] || 'None'}
                                     onChange={handleSelectTrait}
                                 >
                                     {Object.keys(figureparts[trait]).map(opt => (
                                         <MenuItem key={opt} value={opt}>
-                                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                                            <div style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                color: getTraitColor(trait as Trait, opt)
+                                            }}>
                                                 <ListItemText>{opt}</ListItemText>
                                                 {getTraitIcon(trait, opt)}
                                             </div>
@@ -217,23 +261,23 @@ export const FigureBuilder: React.FC<{ baseTraits: ITrait[] }> = ({ baseTraits }
                 <Figure figure={figureString} />
                 <Grid item>
                     <Box m={1}>
-                        {editedTraits.map(trait => (
-                            <Chip key={trait.trait_type} label={`${trait.trait_type}: ${trait.value}`} onDelete={() => restoreTrait(trait.trait_type)} />
+                        {Object.keys(editedTraits).map(trait => (
+                            <Chip key={trait} label={`${trait}: ${editedTraits[trait as Trait]}`} onDelete={() => restoreTrait(trait as Trait)} />
                         ))}
                     </Box>
                 </Grid>
             </Grid>
 
-            {!!editedTraits.length && (
+            {!!Object.keys(editedTraits).length && (
                 <>
                     <Grid item xs={12} md={12}>
                         <Box m={1}>
                             {!!burnSuggestions.length && <Typography variant="h6" mb={1}>{burnSuggestions.length} Suggestions</Typography>}
                             {!burnSuggestions.length && <Typography variant="h6" mb={1}>Sorry, no avatar matches selected criteria.</Typography>}
-                            {burnSuggestions.slice(0, showSuggestionsCount).map(id => (
-                                <Box display="inline" key={id} m={1} >
-                                    <a href={`https://opensea.io/assets/ethereum/0x8a1bbef259b00ced668a8c69e50d92619c672176/${id}`} target="_blank" rel="noreferrer">
-                                        <img alt={id} src={`https://nft-tokens.habbo.com/avatars/images/${id}.png`} />
+                            {burnSuggestions.slice(0, showSuggestionsCount).map(burn => (
+                                <Box display="inline" key={burn.id} m={1} >
+                                    <a href={`https://opensea.io/assets/ethereum/0x8a1bbef259b00ced668a8c69e50d92619c672176/${burn.id}`} target="_blank" rel="noreferrer">
+                                        <img alt={`#${burn.id}`} src={`https://nft-tokens.habbo.com/avatars/images/${burn.id}.png`} />
                                     </a>
                                 </Box>
                             ))}
