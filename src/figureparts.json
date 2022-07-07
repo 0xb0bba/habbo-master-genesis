@@ -69,7 +69,10 @@
       "f": "hd-4204-{0}",
       "m": "hd-4204-{0}"
     },
-    "Dark RoboBoy Face": "hd-4287-{0}",
+    "Dark RoboBoy Face": {
+      "f": "hd-4287-{0}",
+      "m": "hd-4287-{0}"
+    },
     "Default": {
       "f": "hd-600-{0}",
       "m": "hd-180-{0}"
@@ -122,7 +125,10 @@
     "Male": "m"
   },
   "Hair": {
-    "20 Year Dreads": "hr-3800-{0}",
+    "20 Year Dreads": {
+      "f": "hr-3800-{0}",
+      "m": "hr-3800-{0}"
+    },
     "Afro": {
       "m": "hr-110-{0}",
       "f": "hr-863-{0}"
@@ -150,7 +156,10 @@
       "f": "hr-3322-{0}",
       "m": "hr-3322-{0}"
     },
-    "Short Tufts": "hr-3829-{0}",
+    "Short Tufts": {
+      "f": "hr-3829-{0}",
+      "m": "hr-3829-{0}"
+    },
     "Simple Ponytail": {
       "f": "hr-892-{0}",
       "m": "hr-892-{0}"
@@ -173,16 +182,16 @@
     "Blonde": "35",
     "Brown": "",
     "Cyan": "60",
-    "Dark Blue": "1402",
+    "Dark Blue": "1402-58",
     "Galaxy Cat": "",
-    "Ginger": "1400",
+    "Ginger": "1400-34",
     "Green": "1406",
     "Handsome Boar": "",
     "Mermaid Princess": "",
     "Noble Royal": "",
     "None": "",
-    "Pink": "1347",
-    "White": "49"
+    "Pink": "1347-55",
+    "White": "49-60"
   },
   "Hat": {
     "Archer Cap": "ha-3765-{0}",
@@ -247,15 +256,15 @@
     },
     "Cute": {
       "Belt": "",
-      "Eyewear": "",
-      "Hat": "",
-      "Head Accessory": "",
+      "Eyewear": "1320-1314",
+      "Hat": "1327-1326",
+      "Head Accessory": "1326",
       "Jacket": "",
-      "Jewelry": "",
-      "Legs": "",
+      "Jewelry": "1314-1326",
+      "Legs": "105-1332",
       "Mask": "",
-      "Shirt": "",
-      "Shoes": ""
+      "Shirt": "1320-93",
+      "Shoes": "1326"
     },
     "Dark Robot": {
       "Belt": "",
@@ -274,7 +283,7 @@
       "Eyewear": "",
       "Hat": "89-1325",
       "Head Accessory": "",
-      "Jacket": "",
+      "Jacket": "66",
       "Jewelry": "67-66",
       "Legs": "66-90",
       "Mask": "",
@@ -324,10 +333,10 @@
       "Head Accessory": "",
       "Jacket": "",
       "Jewelry": "",
-      "Legs": "",
+      "Legs": "1315-102",
       "Mask": "",
-      "Shirt": "",
-      "Shoes": ""
+      "Shirt": "1323-1322",
+      "Shoes": "95"
     },
     "Galactic": {
       "Belt": "",
@@ -402,10 +411,10 @@
       "Shoes": "1417-1416"
     },
     "Mermaid": {
-      "Belt": "",
+      "Belt": "1327-1416",
       "Eyewear": "",
       "Hat": "",
-      "Head Accessory": "",
+      "Head Accessory": "1332-105",
       "Jacket": "1332",
       "Jewelry": "",
       "Legs": "1327",
@@ -452,11 +461,11 @@
     "Monochrome": {
       "Belt": "",
       "Eyewear": "",
-      "Hat": "",
+      "Hat": "1428-1408",
       "Head Accessory": "",
-      "Jacket": "",
+      "Jacket": "64",
       "Jewelry": "",
-      "Legs": "64",
+      "Legs": "64-110",
       "Mask": "",
       "Shirt": "1427-1428",
       "Shoes": "1427"
@@ -491,10 +500,10 @@
       "Hat": "107",
       "Head Accessory": "104",
       "Jacket": "1423-106",
-      "Jewelry": "",
+      "Jewelry": "1332",
       "Legs": "107-1423",
       "Mask": "",
-      "Shirt": "106",
+      "Shirt": "106-105",
       "Shoes": "1425"
     },
     "Royal": {
@@ -641,17 +650,26 @@
     "Rugged Backpack": "ca-3802-{0}"
   },
   "Legs": {
-    "Animal Print Leggings": "lg-3353-{0}",
+    "Animal Print Leggings": {
+      "f": "lg-3353-{0}",
+      "m": "lg-3353-{0}"
+    },
     "Belted Canvas Shorts": {
       "f": "lg-3202-{0}",
       "m": "lg-3202-{0}"
     },
-    "Cat Pants": "lg-3337-{0}",
+    "Cat Pants": {
+      "f": "lg-3337-{0}",
+      "m": "lg-3337-{0}"
+    },
     "Classic Pants": {
       "f": "lg-720-{0}",
       "m": "lg-285-{0}"
     },
-    "Cyberpunk Striders": "lg-4017-{0}",
+    "Cyberpunk Striders": {
+      "f": "lg-4017-{0}",
+      "m": "lg-4017-{0}"
+    },
     "Flared Pants": {
       "f": "lg-710-{0}",
       "m": "lg-280-{0}"
@@ -778,7 +796,7 @@
       "m": "ch-3880-{0}",
       "f": "ch-3881-{0}"
     },
-    "Inmate Overalls":  {
+    "Inmate Overalls": {
       "f": "ch-3689-{0}",
       "m": "ch-3688-{0}"
     },
@@ -862,7 +880,10 @@
       "f": "sh-3275-{0}",
       "m": "sh-3275-{0}"
     },
-    "Flippers": "sh-3687-{0}",
+    "Flippers": {
+      "f": "sh-3687-{0}",
+      "m": "sh-3687-{0}"
+    },
     "Gothic Boots": "sh-4064-{0}",
     "None": "",
     "Paw Shoes": "sh-3338-{0}",
