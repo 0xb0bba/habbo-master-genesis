@@ -23,7 +23,7 @@
     "Medium Golden": "8",
     "Mermaid": "1",
     "Mighty Demon": "30",
-    "Noble Royal": "",
+    "Noble Royal": "9",
     "Purple": "1364",
     "Rose Beige": "12",
     "Sand": "14",
@@ -217,8 +217,8 @@
     "Ginger": "1400-34",
     "Green": "1406-50",
     "Handsome Boar": "",
-    "Mermaid Princess": "",
-    "Noble Royal": "",
+    "Mermaid Princess": "1345",
+    "Noble Royal": "1350",
     "None": "",
     "Pink": "1347-55",
     "White": "49-60"
@@ -459,9 +459,9 @@
       "Head Accessory": "",
       "Jacket": "",
       "Jewelry": "",
-      "Legs": "",
+      "Legs": "1422",
       "Mask": "",
-      "Shirt": "",
+      "Shirt": "98-104",
       "Shoes": ""
     },
     "Midnight": {
@@ -517,12 +517,12 @@
       "Eyewear": "",
       "Hat": "",
       "Head Accessory": "",
-      "Jacket": "",
+      "Jacket": "1416",
       "Jewelry": "",
-      "Legs": "",
+      "Legs": "1416",
       "Mask": "",
       "Shirt": "",
-      "Shoes": ""
+      "Shoes": "1416-94"
     },
     "Ocean": {
       "Belt": "1332-1433",
