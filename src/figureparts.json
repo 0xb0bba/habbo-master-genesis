@@ -85,7 +85,10 @@
       "f": "hd-3099-{0}",
       "m": ""
     },
-    "Galaxy": "hd-4268-{0}",
+    "Galaxy": {
+      "f": "hd-4268-{0}",
+      "m": "hd-4268-{0}"
+    },
     "Gangster Face": "hd-4174-{0}",
     "Grey Dog": {
       "f": "hd-4205-{0}",
@@ -286,7 +289,7 @@
       "Eyewear": "1320-1314",
       "Hat": "1327-1326",
       "Head Accessory": "1326-1337",
-      "Jacket": "",
+      "Jacket": "105",
       "Jewelry": "1314-1326",
       "Legs": "105-1332",
       "Mask": "",
@@ -315,11 +318,11 @@
       "Legs": "66-90",
       "Mask": "1320",
       "Shirt": "1321-67",
-      "Shoes": "1409"
+      "Shoes": "1409-89"
     },
     "Earth": {
       "Belt": "85-1334",
-      "Eyewear": "",
+      "Eyewear": "88-91",
       "Hat": "90-85",
       "Head Accessory": "",
       "Jacket": "1331-90",
@@ -331,13 +334,13 @@
     },
     "Forest": {
       "Belt": "",
-      "Eyewear": "",
+      "Eyewear": "1433",
       "Hat": "1432-1408",
       "Head Accessory": "102-1432",
       "Jacket": "1432-1430",
-      "Jewelry": "101",
+      "Jewelry": "101-102",
       "Legs": "1432-1430",
-      "Mask": "",
+      "Mask": "83",
       "Shirt": "102-1432",
       "Shoes": "1430-1432"
     },
@@ -348,7 +351,7 @@
       "Head Accessory": "",
       "Jacket": "",
       "Jewelry": "1314-1320",
-      "Legs": "89",
+      "Legs": "89-68",
       "Mask": "",
       "Shirt": "1314-1408",
       "Shoes": "1408"
@@ -359,7 +362,7 @@
       "Hat": "96",
       "Head Accessory": "",
       "Jacket": "102-1432",
-      "Jewelry": "",
+      "Jewelry": "1321",
       "Legs": "1315-102",
       "Mask": "",
       "Shirt": "1323-1322",
@@ -486,12 +489,12 @@
       "Shoes": ""
     },
     "Monochrome": {
-      "Belt": "",
+      "Belt": "110-1427",
       "Eyewear": "110-1427",
       "Hat": "1428-1408",
-      "Head Accessory": "",
+      "Head Accessory": "1314-1428",
       "Jacket": "64-110",
-      "Jewelry": "",
+      "Jewelry": "1243-1408",
       "Legs": "64-110",
       "Mask": "",
       "Shirt": "1427-1428",
@@ -500,10 +503,10 @@
     "Mysterious": {
       "Belt": "1314",
       "Eyewear": "",
-      "Hat": "",
+      "Hat": "64-1418",
       "Head Accessory": "",
-      "Jacket": "",
-      "Jewelry": "",
+      "Jacket": "110",
+      "Jewelry": "75",
       "Legs": "110-100",
       "Mask": "",
       "Shirt": "1408",
@@ -523,9 +526,9 @@
     },
     "Ocean": {
       "Belt": "1332-1433",
-      "Eyewear": "106",
+      "Eyewear": "106-105",
       "Hat": "107-1423",
-      "Head Accessory": "104",
+      "Head Accessory": "104-105",
       "Jacket": "1423-106",
       "Jewelry": "1332-105",
       "Legs": "107-1423",
@@ -535,14 +538,14 @@
     },
     "Royal": {
       "Belt": "1314-1320",
-      "Eyewear": "",
-      "Hat": "1417",
+      "Eyewear": "1412-1321",
+      "Hat": "1417-1321",
       "Head Accessory": "",
-      "Jacket": "",
-      "Jewelry": "",
+      "Jacket": "1417-1321",
+      "Jewelry": "1321",
       "Legs": "100",
       "Mask": "",
-      "Shirt": "1314",
+      "Shirt": "1314-1412",
       "Shoes": "1314"
     },
     "Rustic": {
@@ -558,7 +561,7 @@
       "Shoes": "1325"
     },
     "Sporty": {
-      "Belt": "",
+      "Belt": "1323-1321",
       "Eyewear": "107-106",
       "Hat": "1314-1323",
       "Head Accessory": "1243-1416",
@@ -570,13 +573,13 @@
       "Shoes": "1408-1315"
     },
     "Spring": {
-      "Belt": "",
+      "Belt": "1320-1332",
       "Eyewear": "",
       "Hat": "1332-102",
-      "Head Accessory": "93",
+      "Head Accessory": "93-1322",
       "Jacket": "",
       "Jewelry": "",
-      "Legs": "1430",
+      "Legs": "1430-1432",
       "Mask": "102",
       "Shirt": "102-1432",
       "Shoes": "1327-1326"
