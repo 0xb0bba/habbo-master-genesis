@@ -23,7 +23,8 @@ function App() {
   const [avatars, setAvatars] = useState<IKeyedAvatar[]>([])
   const [idInput, setIdInput] = useState('')
   const [key, setKey] = useState(0)
-  const loadAvatar = () => {
+  const loadAvatar = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     let traits = (metadata as IMetadata)[parseInt(idInput)]
     if (!traits) {
       traits = {
@@ -56,23 +57,27 @@ function App() {
       <CssBaseline />
       <Box p={2} className="App">
         <Stack spacing={2} divider={<Divider flexItem />}>
-          <Grid container>
-            <Grid item alignItems="stretch" style={{ display: "flex" }}>
-              <TextField
-                placeholder="Enter NFT ID"
-                size="small"
-                value={idInput}
-                onChange={e => setIdInput(e.target.value)}
-              />
+          <form onSubmit={loadAvatar}>
+            <Grid container>
+              <Grid item alignItems="stretch" style={{ display: "flex" }}>
+                <TextField
+                  placeholder="Enter NFT ID"
+                  size="small"
+                  value={idInput}
+                  onChange={e => setIdInput(e.target.value)}
+                />
+              </Grid>
+              <Grid item alignItems="stretch" style={{ display: "flex" }}>
+                <Button
+                  type="submit"
+                  size="small"
+                  variant="contained"
+                >
+                  LOAD
+                </Button>
+              </Grid>
             </Grid>
-            <Grid item alignItems="stretch" style={{ display: "flex" }}>
-              <Button
-                size="small"
-                variant="contained"
-                onClick={loadAvatar}>LOAD
-              </Button>
-            </Grid>
-          </Grid>
+          </form>
           {avatars.map(avatar => (
             <Box key={avatar.Key}>
               <Typography display="inline-block" variant='h6' mb={1}>Avatar #{avatar.ID}</Typography>

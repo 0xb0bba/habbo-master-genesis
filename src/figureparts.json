@@ -234,7 +234,7 @@
     "Fish Monster": "ha-4207",
     "Flat cap": "ha-3054-{0}",
     "Military Parade Hat": "ha-3409-{0}",
-    "Mushroom Hat": "ha-3775-{0}",
+    "Mushroom Hat": "ha-3775",
     "None": "",
     "Piglet Hat": "ha-3767-{0}",
     "Rockstar Headband": "ha-3352-{0}",
@@ -421,7 +421,7 @@
       "Eyewear": "",
       "Hat": "1412-100",
       "Head Accessory": "1322-1410",
-      "Jacket": "100",
+      "Jacket": "100-1331",
       "Jewelry": "94-72",
       "Legs": "100-1412",
       "Mask": "1323",
@@ -470,7 +470,7 @@
       "Hat": "1424-1338",
       "Head Accessory": "1419-1424",
       "Jacket": "107-108",
-      "Jewelry": "1426",
+      "Jewelry": "1426-1338",
       "Legs": "110-108",
       "Mask": "",
       "Shirt": "108-1423",
@@ -609,13 +609,13 @@
       "Shoes": ""
     },
     "Winter": {
-      "Belt": "",
+      "Belt": "82-81",
       "Eyewear": "106",
       "Hat": "1314-1423",
       "Head Accessory": "",
       "Jacket": "",
       "Jewelry": "1424",
-      "Legs": "1338",
+      "Legs": "1338-80",
       "Mask": "",
       "Shirt": "77-82",
       "Shoes": "1314-105"
@@ -941,7 +941,10 @@
       "f": "sh-3687-{0}",
       "m": "sh-3687-{0}"
     },
-    "Gothic Boots": "sh-4064-{0}",
+    "Gothic Boots": {
+      "f": "sh-4064-{0}",
+      "m": "sh-4064-{0}"
+    },
     "None": "",
     "Paw Shoes": {
       "f": "sh-3338-{0}",

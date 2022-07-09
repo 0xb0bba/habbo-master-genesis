@@ -195,7 +195,7 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
 
     return (
         <Grid container>
-            <Grid item xs={8} md={10}>
+            <Grid item xs={8} md={9} xl={10}>
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
                         <Autocomplete
@@ -257,7 +257,7 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
                     ))}
                 </Grid>
             </Grid>
-            <Grid item container xs={4} md={2} direction="column">
+            <Grid item container xs={4} md={3} xl={2} direction="column">
                 <Figure figure={figureString} />
                 <Grid item>
                     <Box m={1}>
@@ -275,7 +275,7 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
                             {!!burnSuggestions.length && <Typography variant="h6" mb={1}>{burnSuggestions.length} Suggestions</Typography>}
                             {!burnSuggestions.length && <Typography variant="h6" mb={1}>Sorry, no avatar matches selected criteria.</Typography>}
                             {burnSuggestions.slice(0, showSuggestionsCount).map(burn => (
-                                <Box display="inline" key={burn.id} m={1} >
+                                <Box title={`#${burn.id}`} display="inline" key={burn.id} m={1} >
                                     <a href={`https://opensea.io/assets/ethereum/0x8a1bbef259b00ced668a8c69e50d92619c672176/${burn.id}`} target="_blank" rel="noreferrer">
                                         <img alt={`#${burn.id}`} src={`https://nft-tokens.habbo.com/avatars/images/${burn.id}.png`} />
                                     </a>
