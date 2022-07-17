@@ -87,6 +87,7 @@ function App() {
         })
     }
     fn()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const connectWallet = async () => {
