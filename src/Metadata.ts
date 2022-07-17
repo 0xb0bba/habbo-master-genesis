@@ -27,3 +27,21 @@ export interface ITrait {
     value: string
 }
 
+
+export const rankEffect = (effect: string) => {
+    switch (effect) {
+        case 'Basic H':
+            return 0
+        case 'Golden H':
+            return 1
+        case 'Diamond H':
+            return 2
+        case 'Rainbow H':
+            return 3
+        case 'Trippy H':
+            return 4
+        case 'Ultra Trippy H':
+            return 5
+    }
+    return 0
+}

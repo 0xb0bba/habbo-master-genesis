@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useState } from 'react';
 import figurepartsTyped from './figureparts.json'
 import metadata from './metadata.json'
+import traitcolors from './traitcolors.json'
 import { Figure } from './Figure';
-import { IAvatar, IMetadata, Trait } from './Metadata'
+import { IAvatar, IMetadata, rankEffect, Trait } from './Metadata'
 import { Autocomplete, Box, Button, Chip, FormControl, Grid, InputLabel, ListItemIcon, ListItemText, MenuItem, Select, SelectChangeEvent, TextField, Typography } from '@mui/material';
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh'
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark'
+import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined'
 
 const figureparts = figurepartsTyped as any
 
@@ -24,18 +26,13 @@ const autocompleteOptions = Object.keys(figureparts).flatMap(trait => {
     }))
 })
 
-export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits }) => {
+export const FigureBuilder: React.FC<{ baseTraits: IAvatar, ownedTokens: number[] }> = ({ baseTraits, ownedTokens }) => {
     const [searchInput, setSearchInput] = useState('')
     const [traits, setTraits] = useState(baseTraits)
     const [showSuggestionsCount, setShowSuggestionsCount] = useState(16)
     useEffect(() => {
         setTraits(baseTraits)
     }, [baseTraits])
-
-    const hue = traits.Hues
-    const complexion = traits.Complexion
-    const gender = traits.Gender
-    const hairColor = traits['Hair Color']
 
     const getTraitColor = (trait: Trait, opt: string) => {
         if ((baseTraits[trait] || 'None') === opt) {
@@ -66,21 +63,26 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
         return 'grey'
     }
 
-    const getTraitIcon = (trait: string, opt: string) => {
+    const hasMissingHueData = (hue: string) => {
+        const huedata = (figureparts as any)['Hues'][hue]
+        return !!Object.keys(huedata).find(trait => {
+            const colors = huedata[trait] ? huedata[trait].split('-').length : 0
+            if (traits[trait as Trait] && (traitcolors as any)[trait][traits[trait as Trait]!] > colors) {
+                return true
+            }
+            return false
+        })
+    }
+
+    const getTraitIcon = (trait: Trait, opt: string) => {
         if (opt === 'None') {
             return null
         }
         if (trait === 'Hues') {
-            const colors = Object.values(figureparts[trait][opt])
-            const defined = colors.filter(v => v).length
-            if (defined === 0) {
-                return <ListItemIcon title="All colors are missing"><PriorityHighIcon /></ListItemIcon>
-            } else if (colors.length > defined) {
-                return <ListItemIcon title="Some colors may be missing"><QuestionMarkIcon /></ListItemIcon>
-            } else {
-                // It's still possible we only have 1 of the 2 colors, but not sure which traits might need second color
-                return null
+            if (hasMissingHueData(opt)) {
+                return <ListItemIcon title="Some colors are missing"><QuestionMarkIcon /></ListItemIcon>
             }
+            return null
         }
         let part = figureparts[trait][opt] as FigurePart
         if (typeof part !== 'string') {
@@ -89,15 +91,49 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
                 return <ListItemIcon title="Trait info missing"><PriorityHighIcon /></ListItemIcon>
             }
             // Check if gender specific trait is defined
-            const genderPart = gender === 'Male' ? part.m : part.f
+            const genderPart = traits.Gender === 'Male' ? part.m : part.f
             if (!genderPart) {
-                return <ListItemIcon title="Trait may be incorrect for this gender"><QuestionMarkIcon /></ListItemIcon>
+                return <ListItemIcon title="Trait is incompatible with selected gender"><PriorityHighIcon /></ListItemIcon>
             }
         } else if (!part) {
             return <ListItemIcon title="Trait info missing"><PriorityHighIcon /></ListItemIcon>
         }
 
+        const err = getMissingColors(trait, opt, traits['Hues'])
+        if (err) {
+            return <ListItemIcon title={err}><QuestionMarkIcon /></ListItemIcon>
+        }
+
         return null
+    }
+
+    const getMissingColors = (trait: string, opt: string, hue: string) => {
+        const opts = (traitcolors as any)[trait]
+        if (!opts) {
+            return false
+        }
+        const requiredColors = opts[opt]
+        if (!requiredColors) {
+            return false
+        }
+        const colors = figureparts['Hues'][hue][trait]
+        if (colors === undefined) {
+            return false
+        }
+        const colorCount = colors ? colors.split('-').length : 0
+        if (colorCount >= requiredColors) {
+            return false
+        }
+        if (colorCount === 0 && requiredColors === 2) {
+            return 'Missing primary and secondary color'
+        }
+        if (colorCount === 1 && requiredColors === 2) {
+            return 'Missing secondary color'
+        }
+        if (colorCount === 0 && requiredColors === 1) {
+            return 'Missing primary color'
+        }
+        return 'Oops' + colorCount + ' ' + requiredColors + ' ' + trait
     }
 
     const handleSelectTrait = (e: SelectChangeEvent<string>) => selectTrait(e.target.name as Trait, e.target.value)
@@ -114,26 +150,8 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
         return Object.keys(traits)
             .filter(trait => traits[trait as Trait] !== (baseTraits[trait as Trait] || 'None'))
             .reduce((a, trait) => ({ ...a, [trait]: traits[trait as Trait] }), {}) as IAvatar
-        // return traits.filter(trait => trait.value !== (baseTraits.find(baseTrait => baseTrait.trait_type === trait.trait_type)?.value || 'None'))
     }, [baseTraits, traits])
 
-    const rankEffect = (effect: string) => {
-        switch (effect) {
-            case 'Basic H':
-                return 0
-            case 'Golden H':
-                return 1
-            case 'Diamond H':
-                return 2
-            case 'Rainbow H':
-                return 3
-            case 'Trippy H':
-                return 4
-            case 'Ultra Trippy H':
-                return 5
-        }
-        return 0
-    }
 
     const burnSuggestions = useMemo(() => {
         if (!Object.keys(editedTraits).length) {
@@ -145,6 +163,12 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
                 editedTraits[edited as Trait] === (val.avatar[edited as Trait] || 'None')
             ))
         return matches.sort((m1, m2) => {
+            const owned1 = ownedTokens.includes(m1.id)
+            const owned2 = ownedTokens.includes(m2.id)
+            if (owned1 !== owned2) {
+                return owned1 ? -1 : 1
+            }
+
             const e1 = rankEffect(metadataTyped[m1.id]['Effect'])
             const e2 = rankEffect(metadataTyped[m2.id]['Effect'])
             if (e1 !== e2) {
@@ -152,46 +176,52 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
             }
             return m1.id - m2.id
         })
-    }, [editedTraits])
+    }, [editedTraits, ownedTokens])
 
     useEffect(() => {
         setShowSuggestionsCount(16)
     }, [burnSuggestions])
 
-    const figureString = Object.keys(traits).map(trait => {
-        let parts = figureparts[trait]
-        if (!parts) {
-            // Effect
+    const figureString = useMemo(() => {
+        const hue = traits['Hues']
+        const complexion = traits['Complexion']
+        const gender = traits['Gender']
+        const hairColor = traits['Hair Color']
+        return Object.keys(traits).map(trait => {
+            let parts = figureparts[trait]
+            if (!parts) {
+                // Effect
+                return ''
+            }
+            let part = parts[traits[trait as Trait] as any] as FigurePart
+            if (typeof part !== 'string') {
+                // Prefer own gender if known, otherwise try the other gender. It may be correct
+                part = gender === 'Male' ? part.m || part.f : part.f || part.m
+            }
+            switch (trait) {
+                case 'Belt':
+                case 'Eyewear':
+                case 'Hat':
+                case 'Head Accessory':
+                case 'Jacket':
+                case 'Jewelry':
+                case 'Legs':
+                case 'Mask':
+                case 'Shirt':
+                case 'Shoes':
+                    // Color from hue, specific for the trait type. Hopefully we don't need a color for each specific trait option
+                    // Some traits have 1 color, others have multiple. But passing in multiple seems to work OK
+                    return format(part, figureparts["Hues"][hue][trait])
+                case 'Face':
+                    // Color from complexion
+                    return format(part, figureparts["Complexion"][complexion])
+                case 'Hair':
+                    // Color from hair color
+                    return format(part, figureparts["Hair Color"][hairColor || 'None'])
+            }
             return ''
-        }
-        let part = parts[traits[trait as Trait] as any] as FigurePart
-        if (typeof part !== 'string') {
-            // Prefer own gender if known, otherwise try the other gender. It may be correct
-            part = gender === 'Male' ? part.m || part.f : part.f || part.m
-        }
-        switch (trait) {
-            case 'Belt':
-            case 'Eyewear':
-            case 'Hat':
-            case 'Head Accessory':
-            case 'Jacket':
-            case 'Jewelry':
-            case 'Legs':
-            case 'Mask':
-            case 'Shirt':
-            case 'Shoes':
-                // Color from hue, specific for the trait type. Hopefully we don't need a color for each specific trait option
-                // Some traits have 1 color, others have multiple. But passing in multiple seems to work OK
-                return format(part, figureparts["Hues"][hue][trait])
-            case 'Face':
-                // Color from complexion
-                return format(part, figureparts["Complexion"][complexion])
-            case 'Hair':
-                // Color from hair color
-                return format(part, figureparts["Hair Color"][hairColor || 'None'])
-        }
-        return ''
-    }).filter(part => part).join('.')
+        }).filter(part => part).join('.')
+    }, [traits])
 
     return (
         <Grid container>
@@ -204,11 +234,11 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
                             groupBy={opt => opt.trait}
                             getOptionLabel={opt => `${opt.trait} ${opt.value}`}
                             renderOption={(props, opt) => <MenuItem {...props}>
-                                <div 
+                                <div
                                     style={{
-                                    display: 'flex',
-                                    color: getTraitColor(opt.trait, opt.value)
-                                }}>
+                                        display: 'flex',
+                                        color: getTraitColor(opt.trait, opt.value)
+                                    }}>
                                     <ListItemText>{opt.value}</ListItemText>
                                     {getTraitIcon(opt.trait, opt.value)}
                                 </div>
@@ -247,7 +277,7 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
                                                 color: getTraitColor(trait as Trait, opt)
                                             }}>
                                                 <ListItemText>{opt}</ListItemText>
-                                                {getTraitIcon(trait, opt)}
+                                                {getTraitIcon(trait as Trait, opt)}
                                             </div>
                                         </MenuItem>
                                     ))}
@@ -266,6 +296,15 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
                         ))}
                     </Box>
                 </Grid>
+                <Grid item>
+                    {Object.keys(traits).map(trait => {
+                        const msg = getMissingColors(trait, traits[trait as Trait]!, traits['Hues'])
+                        if (!msg) {
+                            return null
+                        }
+                        return <Typography m={1} variant='subtitle2' key={trait}>{traits[trait as Trait]}: {msg}</Typography>
+                    })}
+                </Grid>
             </Grid>
 
             {!!Object.keys(editedTraits).length && (
@@ -275,9 +314,10 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar }> = ({ baseTraits })
                             {!!burnSuggestions.length && <Typography variant="h6" mb={1}>{burnSuggestions.length} Suggestions</Typography>}
                             {!burnSuggestions.length && <Typography variant="h6" mb={1}>Sorry, no avatar matches selected criteria.</Typography>}
                             {burnSuggestions.slice(0, showSuggestionsCount).map(burn => (
-                                <Box title={`#${burn.id}`} display="inline" key={burn.id} m={1} >
+                                <Box title={`#${burn.id}`} display="inline" position="relative" key={burn.id} m={1} >
                                     <a href={`https://opensea.io/assets/ethereum/0x8a1bbef259b00ced668a8c69e50d92619c672176/${burn.id}`} target="_blank" rel="noreferrer">
                                         <img alt={`#${burn.id}`} src={`https://nft-tokens.habbo.com/avatars/images/${burn.id}.png`} />
+                                        {ownedTokens.includes(burn.id) && <CheckCircleOutlinedIcon fontSize='large' style={{ color: 'green', position: 'absolute', right: 0 }} />}
                                     </a>
                                 </Box>
                             ))}

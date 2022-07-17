@@ -152,7 +152,10 @@
       "f": "hr-4269",
       "m": "hr-4269"
     },
-    "Elemental Ice": "hr-4270",
+    "Elemental Ice": {
+      "f": "hr-4270",
+      "m": "hr-4270"
+    },
     "Flicked Out Short": {
       "m": "hr-828-{0}",
       "f": "hr-854-{0}"
@@ -285,7 +288,7 @@
       "Shoes": ""
     },
     "Cute": {
-      "Belt": "",
+      "Belt": "86-92",
       "Eyewear": "1320-1314",
       "Hat": "1327-1326",
       "Head Accessory": "1326-1337",
@@ -330,7 +333,7 @@
       "Legs": "91-67",
       "Mask": "1409",
       "Shirt": "1325-67",
-      "Shoes": "1331"
+      "Shoes": "1331-110"
     },
     "Forest": {
       "Belt": "",
@@ -400,7 +403,7 @@
       "Jacket": "110-64",
       "Jewelry": "",
       "Legs": "64",
-      "Mask": "",
+      "Mask": "79",
       "Shirt": "1419-76",
       "Shoes": "64"
     },
@@ -418,7 +421,7 @@
     },
     "Heatwave": {
       "Belt": "1323",
-      "Eyewear": "",
+      "Eyewear": "1413-72",
       "Hat": "1412-100",
       "Head Accessory": "1322-1410",
       "Jacket": "100-1331",
@@ -429,10 +432,10 @@
       "Shoes": "1412-1408"
     },
     "Lavender": {
-      "Belt": "",
+      "Belt": "97-1415",
       "Eyewear": "98-1339",
       "Hat": "98-1416",
-      "Head Accessory": "99",
+      "Head Accessory": "99-95",
       "Jacket": "1327-95",
       "Jewelry": "95-98",
       "Legs": "99-98",
@@ -505,8 +508,8 @@
       "Eyewear": "",
       "Hat": "64-1418",
       "Head Accessory": "",
-      "Jacket": "110",
-      "Jewelry": "75",
+      "Jacket": "110-64",
+      "Jewelry": "75-1408",
       "Legs": "110-100",
       "Mask": "",
       "Shirt": "1408",
@@ -543,7 +546,7 @@
       "Head Accessory": "",
       "Jacket": "1417-1321",
       "Jewelry": "1321",
-      "Legs": "100",
+      "Legs": "100-1412",
       "Mask": "",
       "Shirt": "1314-1412",
       "Shoes": "1314"
@@ -613,7 +616,7 @@
       "Eyewear": "106",
       "Hat": "1314-1423",
       "Head Accessory": "",
-      "Jacket": "",
+      "Jacket": "1423",
       "Jewelry": "1424",
       "Legs": "1338-80",
       "Mask": "",
@@ -667,7 +670,10 @@
       "f": "cc-4277-{0}",
       "m": "cc-4277-{0}"
     },
-    "Spiked Shoulder Pads": "cc-3232-{0}",
+    "Spiked Shoulder Pads": {
+      "f": "cc-3232-{0}",
+      "m": "cc-3232-{0}"
+    },
     "Windswept": {
       "f": "cc-4278-{0}",
       "m": "cc-4278-{0}"

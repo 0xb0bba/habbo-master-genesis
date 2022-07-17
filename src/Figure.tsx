@@ -1,6 +1,8 @@
 import { Grid, IconButton } from "@mui/material"
 import { useState } from "react"
-import ThreeSixtyIcon from '@mui/icons-material/ThreeSixty';
+import CopyIcon from '@mui/icons-material/ContentPaste'
+import ThreeSixtyIcon from '@mui/icons-material/ThreeSixty'
+
 export const Figure: React.FC<{ figure: string }> = ({ figure }) => {
     const [direction, setDirection] = useState(4)
 
@@ -10,8 +12,13 @@ export const Figure: React.FC<{ figure: string }> = ({ figure }) => {
             <img src={url} alt='avatar' />
         </Grid>
         <Grid item display="flex" justifyContent="center">
-            <IconButton onClick={() => setDirection((direction + 7) % 8)}>
+            <IconButton title="Rotate" onClick={() => setDirection((direction + 7) % 8)}>
                 <ThreeSixtyIcon />
+            </IconButton>
+            <IconButton title="Copy figure string" onClick={() => {
+                navigator.clipboard.writeText(figure);
+            }}>
+                <CopyIcon />
             </IconButton>
         </Grid>
     </>)
