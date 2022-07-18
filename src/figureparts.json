@@ -355,7 +355,7 @@
       "Jacket": "",
       "Jewelry": "1314-1320",
       "Legs": "89-68",
-      "Mask": "",
+      "Mask": "1320",
       "Shirt": "1314-1408",
       "Shoes": "1408"
     },
@@ -420,7 +420,7 @@
       "Shoes": ""
     },
     "Heatwave": {
-      "Belt": "1323",
+      "Belt": "1323-1322",
       "Eyewear": "1413-72",
       "Hat": "1412-100",
       "Head Accessory": "1322-1410",
@@ -445,7 +445,7 @@
     },
     "Mermaid": {
       "Belt": "1327-1416",
-      "Eyewear": "",
+      "Eyewear": "105-106",
       "Hat": "1416-1327",
       "Head Accessory": "1332-105",
       "Jacket": "1332",
@@ -577,7 +577,7 @@
     },
     "Spring": {
       "Belt": "1320-1332",
-      "Eyewear": "",
+      "Eyewear": "1327-1326",
       "Hat": "1332-102",
       "Head Accessory": "93-1322",
       "Jacket": "",
