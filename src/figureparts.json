@@ -312,14 +312,14 @@
       "Shoes": ""
     },
     "Desert": {
-      "Belt": "",
+      "Belt": "67",
       "Eyewear": "90",
       "Hat": "89-1325",
-      "Head Accessory": "",
+      "Head Accessory": "1324-89",
       "Jacket": "66-91",
       "Jewelry": "67-66",
       "Legs": "66-90",
-      "Mask": "1320",
+      "Mask": "1320-1409",
       "Shirt": "1321-67",
       "Shoes": "1409-89"
     },
@@ -337,7 +337,7 @@
     },
     "Forest": {
       "Belt": "",
-      "Eyewear": "1433",
+      "Eyewear": "1433-1432",
       "Hat": "1432-1408",
       "Head Accessory": "102-1432",
       "Jacket": "1432-1430",
@@ -402,10 +402,10 @@
       "Head Accessory": "",
       "Jacket": "110-64",
       "Jewelry": "",
-      "Legs": "64",
+      "Legs": "64-110",
       "Mask": "79",
       "Shirt": "1419-76",
-      "Shoes": "64"
+      "Shoes": "64-1419"
     },
     "Handsome Boar": {
       "Belt": "",
