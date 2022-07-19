@@ -288,14 +288,14 @@
       "Shoes": ""
     },
     "Cute": {
-      "Belt": "86-92",
+      "Belt": "86-1314",
       "Eyewear": "1320-1314",
       "Hat": "1327-1326",
       "Head Accessory": "1326-1337",
       "Jacket": "105",
       "Jewelry": "1314-1326",
       "Legs": "105-1332",
-      "Mask": "",
+      "Mask": "1332",
       "Shirt": "1320-93",
       "Shoes": "1326-1337"
     },
@@ -327,7 +327,7 @@
       "Belt": "85-1334",
       "Eyewear": "88-91",
       "Hat": "90-85",
-      "Head Accessory": "",
+      "Head Accessory": "67",
       "Jacket": "1331-90",
       "Jewelry": "70-1331",
       "Legs": "91-67",
@@ -336,7 +336,7 @@
       "Shoes": "1331-110"
     },
     "Forest": {
-      "Belt": "",
+      "Belt": "85-84",
       "Eyewear": "1433-1432",
       "Hat": "1432-1408",
       "Head Accessory": "102-1432",
@@ -374,14 +374,14 @@
     "Galactic": {
       "Belt": "",
       "Eyewear": "",
-      "Hat": "",
+      "Hat": "95-1417",
       "Head Accessory": "",
       "Jacket": "",
-      "Jewelry": "",
-      "Legs": "",
+      "Jewelry": "101",
+      "Legs": "108",
       "Mask": "",
-      "Shirt": "",
-      "Shoes": ""
+      "Shirt": "64",
+      "Shoes": "101-106"
     },
     "Galaxy Cat": {
       "Belt": "",
@@ -401,7 +401,7 @@
       "Hat": "1419-1416",
       "Head Accessory": "",
       "Jacket": "110-64",
-      "Jewelry": "",
+      "Jewelry": "1418-1420",
       "Legs": "64-110",
       "Mask": "79",
       "Shirt": "1419-76",
@@ -499,7 +499,7 @@
       "Jacket": "64-110",
       "Jewelry": "1243-1408",
       "Legs": "64-110",
-      "Mask": "",
+      "Mask": "64",
       "Shirt": "1427-1428",
       "Shoes": "1427-1428"
     },
@@ -556,12 +556,12 @@
       "Eyewear": "67",
       "Hat": "67-1409",
       "Head Accessory": "",
-      "Jacket": "",
+      "Jacket": "91-1329",
       "Jewelry": "",
       "Legs": "70",
       "Mask": "",
       "Shirt": "67-66",
-      "Shoes": "1325"
+      "Shoes": "1325-1409"
     },
     "Sporty": {
       "Belt": "1323-1321",
@@ -613,7 +613,7 @@
     },
     "Winter": {
       "Belt": "82-81",
-      "Eyewear": "106",
+      "Eyewear": "106-105",
       "Hat": "1314-1423",
       "Head Accessory": "",
       "Jacket": "1423",
