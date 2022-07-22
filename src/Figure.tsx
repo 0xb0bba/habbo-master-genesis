@@ -12,7 +12,7 @@ export const Figure: React.FC<{ figure: string }> = ({ figure }) => {
             <img src={url} alt='avatar' />
         </Grid>
         <Grid item display="flex" justifyContent="center">
-            <IconButton title="Rotate" onClick={() => setDirection((direction + 7) % 8)}>
+            <IconButton title="Rotate" onClick={() => setDirection((direction + 6) % 8 + 1)}>
                 <ThreeSixtyIcon />
             </IconButton>
             <IconButton title="Copy figure string" onClick={() => {
