@@ -6,7 +6,7 @@ import ThreeSixtyIcon from '@mui/icons-material/ThreeSixty'
 export const Figure: React.FC<{ figure: string }> = ({ figure }) => {
     const [direction, setDirection] = useState(4)
 
-    const url = `https://www.habbo.com/habbo-imaging/avatarimage?size=l&figure=${figure}&direction=${direction}&head_direction=${direction}`
+    const url = `https://figure.parkrp.co/?size=l&figure=${figure}&direction=${direction}&head_direction=${direction}`
     return (<>
         <Grid item display="flex" justifyContent="center">
             <img src={url} alt='avatar' />

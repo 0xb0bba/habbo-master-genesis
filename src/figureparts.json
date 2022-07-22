@@ -89,7 +89,10 @@
       "f": "hd-4268-{0}",
       "m": "hd-4268-{0}"
     },
-    "Gangster Face": "hd-4174-{0}",
+    "Gangster Face": {
+      "f": "hd-4174-{0}",
+      "m": "hd-4174-{0}"
+    },
     "Grey Dog": {
       "f": "hd-4205-{0}",
       "m": "hd-4205-{0}"
@@ -292,7 +295,7 @@
       "Eyewear": "1320-1314",
       "Hat": "1327-1326",
       "Head Accessory": "1326-1337",
-      "Jacket": "105",
+      "Jacket": "105-106",
       "Jewelry": "1314-1326",
       "Legs": "105-1332",
       "Mask": "1332",
@@ -349,15 +352,15 @@
     },
     "Fresh": {
       "Belt": "",
-      "Eyewear": "1314",
+      "Eyewear": "1314-1408",
       "Hat": "89-68",
       "Head Accessory": "",
-      "Jacket": "",
+      "Jacket": "1320-1314",
       "Jewelry": "1314-1320",
       "Legs": "89-68",
       "Mask": "1320",
       "Shirt": "1314-1408",
-      "Shoes": "1408"
+      "Shoes": "1408-1314"
     },
     "Fruity": {
       "Belt": "",
@@ -396,7 +399,7 @@
       "Shoes": ""
     },
     "Gothic": {
-      "Belt": "",
+      "Belt": "1428-74",
       "Eyewear": "79-1420",
       "Hat": "1419-1416",
       "Head Accessory": "",
@@ -580,7 +583,7 @@
       "Eyewear": "1327-1326",
       "Hat": "1332-102",
       "Head Accessory": "93-1322",
-      "Jacket": "",
+      "Jacket": "93",
       "Jewelry": "",
       "Legs": "1430-1432",
       "Mask": "102",
