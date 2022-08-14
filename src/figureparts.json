@@ -151,7 +151,7 @@
       "m": "hr-110-{0}",
       "f": "hr-863-{0}"
     },
-	"Bacon Hair": "hr-890-{0}",
+    "Bacon Hair": "hr-890-{0}",
     "Elemental Fire": {
       "f": "hr-4269",
       "m": "hr-4269"
@@ -367,7 +367,7 @@
       "Belt": "",
       "Eyewear": "1416-1327",
       "Hat": "96",
-      "Head Accessory": "",
+      "Head Accessory": "1323-96",
       "Jacket": "102-1432",
       "Jewelry": "1321",
       "Legs": "1315-102",
@@ -509,7 +509,7 @@
     },
     "Mysterious": {
       "Belt": "1314",
-      "Eyewear": "",
+      "Eyewear": "1418-75",
       "Hat": "64-1418",
       "Head Accessory": "",
       "Jacket": "110-64",
