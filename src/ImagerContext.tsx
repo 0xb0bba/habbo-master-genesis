@@ -1,7 +1,7 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material"
 import React, { useContext, useState } from "react"
 
-export const NitroImager = 'https://figure.parkrp.co/?size=l&figure='
+export const NitroImager = 'https://imager.habboon.pw/?size=l&figure='
 export const HabboImager = 'https://www.habbo.com/habbo-imaging/avatarimage?size=l&figure='
 
 export const ImagerContext = React.createContext({

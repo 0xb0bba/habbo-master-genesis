@@ -26,6 +26,22 @@ const autocompleteOptions = Object.keys(figureparts).flatMap(trait => {
     }))
 })
 
+const allowNone = (trait: Trait) => {
+    switch (trait) {
+        case 'Belt':
+        case 'Eyewear':
+        case 'Hair':
+        case 'Hair Color':
+        case 'Hat':
+        case 'Head Accessory':
+        case 'Jacket':
+        case 'Jewelry':
+        case 'Mask':
+            return true
+    }
+    return false
+}
+
 export const FigureBuilder: React.FC<{ baseTraits: IAvatar, ownedTokens: number[] }> = ({ baseTraits, ownedTokens }) => {
     const [searchInput, setSearchInput] = useState('')
     const [traits, setTraits] = useState(baseTraits)
@@ -36,6 +52,9 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar, ownedTokens: number[
 
     const getTraitColor = (trait: Trait, opt: string) => {
         if ((baseTraits[trait] || 'None') === opt) {
+            return ''
+        }
+        if (opt === 'None' && allowNone(trait)) {
             return ''
         }
         const editedWithout = { ...editedTraits } as any
@@ -160,7 +179,8 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar, ownedTokens: number[
         const metadataTyped = metadata as IMetadata
         const matches = metadata.map((avatar, id) => ({ avatar, id }))
             .filter(val => val.avatar && Object.keys(editedTraits).every(edited =>
-                editedTraits[edited as Trait] === (val.avatar[edited as Trait] || 'None')
+                editedTraits[edited as Trait] === (val.avatar[edited as Trait] || 'None') ||
+                (editedTraits[edited as Trait] === 'None' && allowNone(edited as Trait))
             ))
         return matches.sort((m1, m2) => {
             const owned1 = ownedTokens.includes(m1.id)
