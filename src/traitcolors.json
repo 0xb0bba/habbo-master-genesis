@@ -14,7 +14,9 @@
     "Ski Goggles": 2,
     "Small Round Glasses": 1,
     "Snorkle": 1,
-    "Thick glasses": 1
+    "Thick glasses": 1,
+    "Laser Eyes": 1,
+    "Blindfold": 1
   },
   "Face": {
     "Alien": 1,
@@ -37,7 +39,10 @@
     "Wealthy Eyes": 1,
     "Worried": 1,
     "Yellow Dog": 1,
-    "Zombie": 1
+    "Zombie": 1,
+    "Mummy Face": 1,
+    "Tentacle Dude": 1,
+    "Hairy Dude": 1
   },
   "Hair": {
     "20 Year Dreads": 2,
@@ -70,7 +75,9 @@
     "Slouchy Knit Hat": 1,
     "Top hat": 2,
     "Witch Hat": 2,
-    "Wooly Bear Hat": 2
+    "Wooly Bear Hat": 2,
+    "Pirate Hat": 2,
+    "Fedora": 2
   },
   "Head Accessory": {
     "Antennae Headband": 1,
@@ -81,7 +88,8 @@
     "Floral Crown": 2,
     "H for Habbo Headphones": 2,
     "Rose Hair Clip": 1,
-    "Skull Sprout": 2
+    "Skull Sprout": 2,
+    "Star Shades": 1
   },
   "Jacket": {
     "Chocolate Hoody": 2,
@@ -93,14 +101,18 @@
     "Royal Cape": 1,
     "Spiked Shoulder Pads": 2,
     "Windswept": 1,
-    "Wool Cape Coat": 2
+    "Wool Cape Coat": 2,
+    "Backruptcy Barrel": 1,
+    "Pirate Jacket": 1,
+    "Bomber Jacket": 1
   },
   "Jewelry": {
     "Binoculars": 2,
     "Classic Scarf": 1,
     "Classic Tassled Scarf": 2,
     "Cursed skull pendant": 1,
-    "Rugged Backpack": 2
+    "Rugged Backpack": 2,
+    "Headphones": 1
   },
   "Legs": {
     "Animal Print Leggings": 1,
@@ -119,7 +131,10 @@
     "Spiderweb Skirt": 1,
     "Strap Trousers": 2,
     "Suspender Pants": 1,
-    "Tokyo Tutu": 1
+    "Tokyo Tutu": 1,
+    "Checkered Shorts": 1,
+    "Wide Jeans": 1,
+    "Wrapped Pants": 1
   },
   "Mask": {
     "Bandit Mask": 1,
@@ -130,7 +145,9 @@
     "Mustache": 1,
     "Ravenous Wolf Mask": 1,
     "Veil": 1,
-    "Vent Mask": 2
+    "Vent Mask": 2,
+    "Handlebar Mustache": 1,
+    "Phantom Mask": 1
   },
   "Shirt": {
     "Bandage Top": 1,
@@ -151,7 +168,9 @@
     "Skull and Bones": 1,
     "Starched Tuxedo Shirt": 2,
     "Sulake Cloud": 1,
-    "Two Tone Top": 2
+    "Two Tone Top": 2,
+    "Grid Shirt": 2,
+    "Wider Stripes": 2
   },
   "Shoes": {
     "Bunny Slippers": 1,
@@ -164,6 +183,9 @@
     "Paw Shoes": 1,
     "Sandals": 1,
     "Vintage Canvas": 1,
-    "Winter Boots": 2
+    "Winter Boots": 2,
+    "Clown Shoes": 2,
+    "Mismatched Shoes": 2,
+    "HC Shoes": 2
   }
 }

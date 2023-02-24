@@ -39,7 +39,6 @@
     "Hero Mask": "ea-3083-{0}",
     "Hipster Glasses": "ea-3484",
     "Hypnotic glasses": "ea-4212",
-    "Gem Glasses": "ea-4161",
     "Jewelled Glasses": "ea-4161",
     "Leafy Mask": "ea-3822-{0}",
     "None": "",
@@ -52,9 +51,9 @@
     "Strawberry Eyes": "ea-3961",
     "Thick glasses": "ea-1401-{0}",
     "VR Glasses": "ea-1405",
-    "Laser Eyes": "ea-5146",
+    "Laser Eyes": "ea-5146-{0}",
     "Pirate Skull Patch": "ea-5148",
-    "Blindfold": "ea-5156"
+    "Blindfold": "ea-5156-{0}"
   },
   "Face": {
     "Alien": {
@@ -106,10 +105,6 @@
       "m": "hd-3103-{0}"
     },
     "Mystic's Eyes": {
-      "f": "hd-3600-{0}",
-      "m": "hd-3600-{0}"
-    },
-    "Alluring Eyes": {
       "f": "hd-3600-{0}",
       "m": "hd-3600-{0}"
     },
@@ -300,7 +295,7 @@
     "Rose Hair Clip": "he-3079-{0}",
     "Skull Sprout": "he-3821-{0}",
     "White Clouds": "he-4262",
-    "Star Shades": "he-5147"
+    "Star Shades": "he-5147-{0}"
   },
   "Hues": {
     "Autumn Dog": {
@@ -527,7 +522,7 @@
       "Jacket": "64-110",
       "Jewelry": "1243-1408",
       "Legs": "64-110",
-      "Mask": "64",
+      "Mask": "64-110",
       "Shirt": "1427-1428",
       "Shoes": "1427-1428"
     },

@@ -35,7 +35,7 @@ const masterGenTraits: TraitList = {
     'Face': ['Mummy Face', 'Tentacle Dude', 'Hairy Dude'],
     'Hat': ['Propeller Hat', 'Pirate Hat', 'Fedora'],
     'Head Accessory': ['Star Shades'],
-    'Jacket': ['Bankruptcy Barrel', 'Pirate Jacket', 'Bomber Jacket'],
+    'Jacket': ['Backruptcy Barrel', 'Pirate Jacket', 'Bomber Jacket'],
     'Jewelry': ['Headphones'],
     'Legs': ['Checkered Shorts', 'Wide Jeans', 'Wrapped Pants'],
     'Mask': ['Handlebar Mustache', 'Phantom Mask'],
