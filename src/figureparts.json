@@ -39,6 +39,7 @@
     "Hero Mask": "ea-3083-{0}",
     "Hipster Glasses": "ea-3484",
     "Hypnotic glasses": "ea-4212",
+    "Gem Glasses": "ea-4161",
     "Jewelled Glasses": "ea-4161",
     "Leafy Mask": "ea-3822-{0}",
     "None": "",
@@ -50,7 +51,10 @@
     "Snorkle": "ea-3196-{0}",
     "Strawberry Eyes": "ea-3961",
     "Thick glasses": "ea-1401-{0}",
-    "VR Glasses": "ea-1405"
+    "VR Glasses": "ea-1405",
+    "Laser Eyes": "ea-5146",
+    "Pirate Skull Patch": "ea-5148",
+    "Blindfold": "ea-5156"
   },
   "Face": {
     "Alien": {
@@ -105,6 +109,10 @@
       "f": "hd-3600-{0}",
       "m": "hd-3600-{0}"
     },
+    "Alluring Eyes": {
+      "f": "hd-3600-{0}",
+      "m": "hd-3600-{0}"
+    },
     "Pig": {
       "f": "hd-4202-{0}",
       "m": "hd-4202-{0}"
@@ -136,6 +144,18 @@
     "Zombie": {
       "f": "hd-4206-{0}",
       "m": "hd-4206-{0}"
+    },
+    "Mummy Face": {
+      "f": "hd-5154-{0}",
+      "m": "hd-5154-{0}"
+    },
+    "Tentacle Dude": {
+      "f": "hd-5143-{0}",
+      "m": "hd-5143-{0}"
+    },
+    "Hairy Dude": {
+      "f": "hd-5153-{0}",
+      "m": "hd-5153-{0}"
     }
   },
   "Gender": {
@@ -153,12 +173,12 @@
     },
     "Bacon Hair": "hr-890-{0}",
     "Elemental Fire": {
-      "f": "hr-4269",
-      "m": "hr-4269"
+      "f": "hr-4269-{0}",
+      "m": "hr-4269-{0}"
     },
     "Elemental Ice": {
-      "f": "hr-4270",
-      "m": "hr-4270"
+      "f": "hr-4270-{0}",
+      "m": "hr-4270-{0}"
     },
     "Flicked Out Short": {
       "m": "hr-828-{0}",
@@ -250,7 +270,10 @@
     "Squid Hat": "ha-3356",
     "Top hat": "ha-3632-{0}",
     "Witch Hat": "ha-3843-{0}",
-    "Wooly Bear Hat": "ha-4039-{0}"
+    "Wooly Bear Hat": "ha-4039-{0}",
+    "Propeller Hat": "ha-5155-{0}",
+    "Pirate Hat": "ha-5149-{0}",
+    "Fedora": "ha-3209-{0}"
   },
   "Head Accessory": {
     "Antennae Headband": "he-3227-{0}",
@@ -276,7 +299,8 @@
     "Plume": "he-1601",
     "Rose Hair Clip": "he-3079-{0}",
     "Skull Sprout": "he-3821-{0}",
-    "White Clouds": "he-4262"
+    "White Clouds": "he-4262",
+    "Star Shades": "he-5147"
   },
   "Hues": {
     "Autumn Dog": {
@@ -503,7 +527,7 @@
       "Jacket": "64-110",
       "Jewelry": "1243-1408",
       "Legs": "64-110",
-      "Mask": "64-110",
+      "Mask": "64",
       "Shirt": "1427-1428",
       "Shoes": "1427-1428"
     },
@@ -685,6 +709,18 @@
     "Wool Cape Coat": {
       "f": "cc-4106-{0}",
       "m": "cc-4107-{0}"
+    },
+    "Backruptcy Barrel": {
+      "f": "cc-5144-{0}",
+      "m": "cc-5144-{0}"
+    },
+    "Pirate Jacket": {
+      "f": "cc-5150-{0}",
+      "m": "cc-5150-{0}"
+    },
+    "Bomber Jacket": {
+      "f": "cc-887-{0}",
+      "m": "cc-887-{0}"
     }
   },
   "Jewelry": {
@@ -696,7 +732,8 @@
     "None": "",
     "Paparazzi Camera": "ca-3485",
     "Peace Necklace": "ca-1809",
-    "Rugged Backpack": "ca-3802-{0}"
+    "Rugged Backpack": "ca-3802-{0}",
+    "Headphones": "ca-5145-{0}"
   },
   "Legs": {
     "Animal Print Leggings": {
@@ -766,6 +803,18 @@
     "Tokyo Tutu": {
       "f": "lg-3695-{0}",
       "m": "lg-3695-{0}"
+    },
+    "Checkered Shorts": {
+      "f": "lg-5152-{0}",
+      "m": "lg-5152-{0}"
+    },
+    "Wide Jeans": {
+      "f": "lg-5163-{0}",
+      "m": "lg-5163-{0}"
+    },
+    "Wrapped Pants": {
+      "f": "lg-3235-{0}",
+      "m": "lg-3235-{0}"
     }
   },
   "Mask": {
@@ -782,7 +831,9 @@
     "Ravenous Wolf Mask": "fa-3771-{0}",
     "Surgical Mask": "fa-1212",
     "Veil": "fa-3193-{0}",
-    "Vent Mask": "fa-3378-{0}"
+    "Vent Mask": "fa-3378-{0}",
+    "Handlebar Mustache": "fa-5157-{0}",
+    "Phantom Mask": "fa-5158-{0}"
   },
   "Shirt": {
     "Bandage Top": {
@@ -924,6 +975,14 @@
     "Two Tone Top": {
       "f": "ch-3836-{0}",
       "m": "ch-3836-{0}"
+    },
+    "Grid Shirt": {
+      "f": "ch-5160-{0}",
+      "m": "ch-5159-{0}"
+    },
+    "Wider Stripes": {
+      "f": "ch-5162-{0}",
+      "m": "ch-5161-{0}"
     }
   },
   "Shoes": {
@@ -971,6 +1030,18 @@
     "Winter Boots": {
       "f": "sh-3252-{0}",
       "m": "sh-3252-{0}"
+    },
+    "Clown Shoes": {
+      "f": "sh-5164-{0}",
+      "m": "sh-5164-{0}"
+    },
+    "Mismatched Shoes": {
+      "f": "sh-5151-{0}",
+      "m": "sh-5151-{0}"
+    },
+    "HC Shoes": {
+      "f": "sh-3180-{0}",
+      "m": "sh-3180-{0}"
     }
   }
 }
