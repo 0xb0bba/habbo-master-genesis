@@ -26,6 +26,30 @@ const autocompleteOptions = Object.keys(figureparts).flatMap(trait => {
     }))
 })
 
+type TraitList = {
+    [key in keyof IAvatar]-?: string[]
+}
+
+const masterGenTraits: TraitList = {
+    'Eyewear': ['Laser Eyes', 'Pirate Skull Patch', 'Blindfold'],
+    'Face': ['Mummy Face', 'Tentacle Dude', 'Hairy Dude'],
+    'Hat': ['Propeller Hat', 'Pirate Hat', 'Fedora'],
+    'Head Accessory': ['Star Shades'],
+    'Jacket': ['Bankruptcy Barrel', 'Pirate Jacket', 'Bomber Jacket'],
+    'Jewelry': ['Headphones'],
+    'Legs': ['Checkered Shorts', 'Wide Jeans', 'Wrapped Pants'],
+    'Mask': ['Handlebar Mustache', 'Phantom Mask'],
+    'Shirt': ['Grid Shirt', 'Wider Stripes'],
+    'Shoes': ['Clown Shoes', 'Mismatched Shoes', 'HC Shoes'],
+    'Complexion': [],
+    'Effect': [],
+    'Gender': [],
+    'Hues': [],
+    'Belt': [],
+    'Hair': [],
+    'Hair Color': []
+}
+
 const allowNone = (trait: Trait) => {
     switch (trait) {
         case 'Belt':
@@ -51,16 +75,22 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar, ownedTokens: number[
     }, [baseTraits])
 
     const getTraitColor = (trait: Trait, opt: string) => {
+        if (masterGenTraits[trait].includes(opt)) {
+            return 'orange'
+        }
         if ((baseTraits[trait] || 'None') === opt) {
+            return ''
+        }
+        if (trait === 'Gender') {
             return ''
         }
         if (opt === 'None' && allowNone(trait)) {
             return ''
         }
-        const editedWithout = { ...editedTraits } as any
+        const editedWithout = { ...requireTraits } as any
         delete editedWithout[trait]
 
-        if (Object.keys(editedWithout).length === Object.keys(editedTraits).length && burnSuggestions.length) {
+        if (Object.keys(editedWithout).length === Object.keys(requireTraits).length && burnSuggestions.length) {
             const match = burnSuggestions.find(id => (id.avatar[trait] || 'None') === opt)
             if (match) {
                 return ''
@@ -171,17 +201,24 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar, ownedTokens: number[
             .reduce((a, trait) => ({ ...a, [trait]: traits[trait as Trait] }), {}) as IAvatar
     }, [baseTraits, traits])
 
+    const requireTraits = useMemo(() => {
+        return Object.keys(editedTraits)
+            .filter(trait => !(trait === 'Gender' ||
+                (editedTraits[trait as Trait] === 'None' && allowNone(trait as Trait)) ||
+                masterGenTraits[trait as Trait].includes(editedTraits[trait as Trait]!)))
+            .reduce((a, trait) => ({ ...a, [trait]: editedTraits[trait as Trait] }), {}) as IAvatar
+    }, [editedTraits])
 
     const burnSuggestions = useMemo(() => {
-        if (!Object.keys(editedTraits).length) {
+        if (!Object.keys(requireTraits).length) {
             return []
         }
+
         const metadataTyped = metadata as IMetadata
         const matches = metadata.map((avatar, id) => ({ avatar, id }))
-            .filter(val => val.avatar && Object.keys(editedTraits).every(edited =>
-                editedTraits[edited as Trait] === (val.avatar[edited as Trait] || 'None') ||
-                (editedTraits[edited as Trait] === 'None' && allowNone(edited as Trait))
-            ))
+            .filter(val => val.avatar && Object.keys(requireTraits).every(edited =>
+                requireTraits[edited as Trait] === (val.avatar[edited as Trait] || 'None'))
+            )
         return matches.sort((m1, m2) => {
             const owned1 = ownedTokens.includes(m1.id)
             const owned2 = ownedTokens.includes(m2.id)
@@ -196,7 +233,7 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar, ownedTokens: number[
             }
             return m1.id - m2.id
         })
-    }, [editedTraits, ownedTokens])
+    }, [requireTraits, ownedTokens])
 
     useEffect(() => {
         setShowSuggestionsCount(16)
@@ -312,7 +349,7 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar, ownedTokens: number[
                 <Grid item>
                     <Box m={1}>
                         {Object.keys(editedTraits).map(trait => (
-                            <Chip key={trait} label={`${trait}: ${editedTraits[trait as Trait]}`} onDelete={() => restoreTrait(trait as Trait)} />
+                            <Chip style={{ color: getTraitColor(trait as Trait, editedTraits[trait as Trait]!) }} key={trait} label={`${trait}: ${editedTraits[trait as Trait]}`} onDelete={() => restoreTrait(trait as Trait)} />
                         ))}
                     </Box>
                 </Grid>
@@ -327,7 +364,7 @@ export const FigureBuilder: React.FC<{ baseTraits: IAvatar, ownedTokens: number[
                 </Grid>
             </Grid>
 
-            {!!Object.keys(editedTraits).length && (
+            {!!Object.keys(requireTraits).length && (
                 <>
                     <Grid item xs={12} md={12}>
                         <Box m={1}>

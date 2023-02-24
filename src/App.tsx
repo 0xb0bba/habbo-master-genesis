@@ -26,11 +26,23 @@ interface IKeyedAvatar {
 }
 
 function App() {
-  const [avatars, setAvatars] = useState<IKeyedAvatar[]>([])
+  const [avatars, setAvatars] = useState<IKeyedAvatar[]>([{
+    Traits: {
+      Gender: 'Male',
+      Complexion: 'Vanilla',
+      Hues: 'Mysterious',
+      Face: 'Default',
+      Shirt: 'Classic T-Shirt',
+      Effect: 'Basic H',
+      Legs: 'None'
+    },
+    ID: 0,
+    Key: 0
+  }])
   const [tokens, setTokens] = useState<number[]>([])
   const [showTokensCount, setShowTokensCount] = useState(16)
   const [idInput, setIdInput] = useState('')
-  const [key, setKey] = useState(0)
+  const [key, setKey] = useState(1)
   const handleLoadAvatar = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     loadAvatar(parseInt(idInput) || 0)

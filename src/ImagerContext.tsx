@@ -10,7 +10,7 @@ export const ImagerContext = React.createContext({
 })
 
 export const ImagerProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [value, setValue] = useState(NitroImager)
+    const [value, setValue] = useState(HabboImager)
     return <ImagerContext.Provider value={{ value, setValue }}>
         {children}
     </ImagerContext.Provider>
