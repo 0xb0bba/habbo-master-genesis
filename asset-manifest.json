@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/habbo-master-genesis/static/css/main.a474edea.css",
-    "main.js": "/habbo-master-genesis/static/js/main.4083ec5e.js",
+    "main.js": "/habbo-master-genesis/static/js/main.daeb8357.js",
     "static/js/787.fcb13052.chunk.js": "/habbo-master-genesis/static/js/787.fcb13052.chunk.js",
     "index.html": "/habbo-master-genesis/index.html",
     "main.a474edea.css.map": "/habbo-master-genesis/static/css/main.a474edea.css.map",
-    "main.4083ec5e.js.map": "/habbo-master-genesis/static/js/main.4083ec5e.js.map",
+    "main.daeb8357.js.map": "/habbo-master-genesis/static/js/main.daeb8357.js.map",
     "787.fcb13052.chunk.js.map": "/habbo-master-genesis/static/js/787.fcb13052.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a474edea.css",
-    "static/js/main.4083ec5e.js"
+    "static/js/main.daeb8357.js"
   ]
 }
