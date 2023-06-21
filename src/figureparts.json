@@ -39,7 +39,6 @@
     "Hero Mask": "ea-3083-{0}",
     "Hipster Glasses": "ea-3484",
     "Hypnotic glasses": "ea-4212",
-    "Gem Glasses": "ea-4161",
     "Jewelled Glasses": "ea-4161",
     "Leafy Mask": "ea-3822-{0}",
     "None": "",
@@ -109,10 +108,6 @@
       "f": "hd-3600-{0}",
       "m": "hd-3600-{0}"
     },
-    "Alluring Eyes": {
-      "f": "hd-3600-{0}",
-      "m": "hd-3600-{0}"
-    },
     "Pig": {
       "f": "hd-4202-{0}",
       "m": "hd-4202-{0}"
@@ -148,14 +143,6 @@
     "Mummy Face": {
       "f": "hd-5154-{0}",
       "m": "hd-5154-{0}"
-    },
-    "Tentacle Dude": {
-      "f": "hd-5143-{0}",
-      "m": "hd-5143-{0}"
-    },
-    "Hairy Dude": {
-      "f": "hd-5153-{0}",
-      "m": "hd-5153-{0}"
     },
     "Kraken Head": {
       "f": "hd-5143-{0}",
@@ -734,10 +721,6 @@
     "Wool Cape Coat": {
       "f": "cc-4106-{0}",
       "m": "cc-4107-{0}"
-    },
-    "Backruptcy Barrel": {
-      "f": "cc-5144-{0}",
-      "m": "cc-5144-{0}"
     },
     "Pirate Jacket": {
       "f": "cc-5150-{0}",

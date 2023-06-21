@@ -32,13 +32,13 @@ type TraitList = {
 
 const masterGenTraits: TraitList = {
     'Eyewear': ['Laser Eyes', 'Pirate Skull Patch', 'Blindfold'],
-    'Face': ['Mummy Face', 'Tentacle Dude', 'Hairy Dude'],
-    'Hat': ['Propeller Hat', 'Pirate Hat', 'Fedora'],
+    'Face': ['Mummy Face', 'Tentacle Dude', 'Hairy Dude', 'Kraken Head', 'Monkey King Face'],
+    'Hat': ['Propeller Hat', 'Pirate Hat', 'Fedora', 'Viking Helmet'],
     'Head Accessory': ['Star Shades'],
-    'Jacket': ['Backruptcy Barrel', 'Pirate Jacket', 'Bomber Jacket'],
+    'Jacket': ['Backruptcy Barrel', 'Pirate Jacket', 'Bomber Jacket', 'Big Barrel'],
     'Jewelry': ['Headphones'],
     'Legs': ['Checkered Shorts', 'Wide Jeans', 'Wrapped Pants'],
-    'Mask': ['Handlebar Mustache', 'Phantom Mask'],
+    'Mask': ['Handlebar Mustache', 'Phantom Mask', 'Viking Braided Beard'],
     'Shirt': ['Grid Shirt', 'Wider Stripes'],
     'Shoes': ['Clown Shoes', 'Mismatched Shoes', 'HC Shoes'],
     'Complexion': [],
@@ -46,7 +46,7 @@ const masterGenTraits: TraitList = {
     'Gender': [],
     'Hues': [],
     'Belt': [],
-    'Hair': [],
+    'Hair': ['Classic Quiff', 'Classic Brushover', 'Classic Ponytails', 'Classic Pigtails'],
     'Hair Color': []
 }
 
