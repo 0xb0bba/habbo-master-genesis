@@ -51,7 +51,7 @@
     "Strawberry Eyes": "ea-3961",
     "Thick glasses": "ea-1401-{0}",
     "VR Glasses": "ea-1405",
-    "Laser Eyes": "ea-5146-{0}",
+    "Laser Eyes": "ea-5146",
     "Pirate Skull Patch": "ea-5148",
     "Blindfold": "ea-5156-{0}"
   },
@@ -86,7 +86,7 @@
     },
     "Feminine": {
       "f": "hd-3099-{0}",
-      "m": ""
+      "m": "hd-3094-{0}"
     },
     "Galaxy": {
       "f": "hd-4268-{0}",
@@ -121,7 +121,7 @@
       "m": "hd-4267-{0}"
     },
     "Tired": {
-      "f": "",
+      "f": "hd-610-{0}",
       "m": "hd-200-{0}"
     },
     "Wealthy Eyes": {
@@ -129,7 +129,7 @@
       "m": "hd-4280-{0}"
     },
     "Worried": {
-      "f": "",
+      "f": "hd-3105-{0}",
       "m": "hd-190-{0}"
     },
     "Yellow Dog": {
@@ -235,7 +235,7 @@
     "Brown": "37-1347",
     "Cyan": "60-50",
     "Dark Blue": "1402-58",
-    "Galaxy Cat": "",
+    "Galaxy Cat": "58",
     "Ginger": "1400-34",
     "Green": "1406-50",
     "Handsome Boar": "",
@@ -410,13 +410,13 @@
       "Belt": "",
       "Eyewear": "",
       "Hat": "",
-      "Head Accessory": "",
+      "Head Accessory": "105",
       "Jacket": "",
       "Jewelry": "",
-      "Legs": "",
+      "Legs": "81",
       "Mask": "",
-      "Shirt": "",
-      "Shoes": ""
+      "Shirt": "81-105",
+      "Shoes": "81"
     },
     "Gothic": {
       "Belt": "1428-74",
